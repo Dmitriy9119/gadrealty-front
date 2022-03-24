@@ -1,0 +1,106 @@
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .signUpContainer {
+    max-width: 760px;
+    width: 760px;
+    margin: 0 auto;
+    padding: 5.2% 8.5%;
+    border-radius: 20px;
+
+
+    a {
+      color: #BE1827;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .checkboxTermsServices {
+      max-width: 60%;
+
+      .termsPolicy {
+        font-size: 14px;
+        color: #4E4E4E;
+      }
+    }
+
+    .checkbox {
+      font-size: 14px;
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: transparent;
+        border: 1px solid black;
+      }
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      input:checked ~ .checkmark {
+        background-color: #BE1827;
+      }
+    }
+
+    .modal-header {
+
+      span {
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      border-bottom: none;
+    }
+
+    .modal-body {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+
+      .form-floating {
+        font-size: 14px;
+        color: #7D7F87;
+        min-width: 45.5%;
+
+        .form-control {
+          font-size: 16px;
+          min-height: 59px;
+        }
+      }
+    }
+  }
+
+
+  .modal-footer {
+    border-top: none;
+
+    button {
+      width: 100%;
+      min-height: 59px;
+      background: #BE1827;
+    }
+  }
+
+}
+
+
