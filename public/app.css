@@ -8,15 +8,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.checkmark:after {
-  content: "";
-  display: none;
-}
-
-input:checked ~ .checkmark:after {
-  display: block;
-}
-
 .signUpContainer {
   max-width: 760px;
   width: 760px;
@@ -116,6 +107,8 @@ input:checked ~ .checkmark:after {
   justify-content: center;
 }
 .signUpContainer .checkbox .checkmark:after {
+  content: "";
+  display: block;
   margin-top: 1px;
   width: 5px;
   height: 10px;
@@ -124,6 +117,9 @@ input:checked ~ .checkmark:after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.signUpContainer .checkbox .checkmark:checked {
+  background-color: #BE1827;
 }
 .signUpContainer .checkbox input {
   position: absolute;

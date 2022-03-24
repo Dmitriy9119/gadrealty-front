@@ -10,14 +10,6 @@
 // Extra large devices (large desktops, 1200px and up)
 //@media (min-width: 1200px) {}
 
-.checkmark:after {
-  content: "";
-  display: none;
-}
-
-input:checked ~ .checkmark:after {
-  display: block;
-}
 
 .signUpContainer {
   max-width: 760px;
@@ -37,12 +29,10 @@ input:checked ~ .checkmark:after {
   a {
     color: #BE1827;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
 
   .modal-header {
 
@@ -129,7 +119,6 @@ input:checked ~ .checkmark:after {
     flex-flow: row-reverse;
     justify-content: left;
 
-
     .checkmark {
       margin-right: 6px;
       height: 17px;
@@ -138,17 +127,21 @@ input:checked ~ .checkmark:after {
       border: 1px solid #ACACAC;
       border-radius: 2px;
       justify-content: center;
-    }
-
-    .checkmark:after {
-      margin-top: 1px;
-      width: 5px;
-      height: 10px;
-      border: solid white;
-      border-width: 0 3px 3px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+      &:after {
+        content: "";
+        display: block;
+        margin-top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:checked{
+        background-color: #BE1827;
+      }
     }
 
     input {
@@ -157,10 +150,9 @@ input:checked ~ .checkmark:after {
       cursor: pointer;
       height: 0;
       width: 0;
-    }
-
-    input:checked ~ .checkmark {
-      background-color: #BE1827;
+      &:checked ~ .checkmark {
+        background-color: #BE1827;
+      }
     }
   }
 }
