@@ -24,7 +24,7 @@ body {
     text-decoration: underline;
   }
   .signUpContainer .checkboxTermsServices {
-    max-width: 60%;
+    max-width: 50%;
   }
   .signUpContainer .checkboxTermsServices .termsPolicy {
     font-size: 14px;
