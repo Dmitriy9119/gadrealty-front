@@ -24,12 +24,11 @@
     <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
-<!-- Sign Up Modal -->
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignUp">
     Sign Up
 </button>
-<!-- Modal -->
+<!-- Sign Up Modal -->
 <div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUpTitle"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-center" role="document">
@@ -41,6 +40,13 @@
                 </button>
             </div>
             <div class="modal-body d-flex">
+                <div class="loginWith d-flex justify-content-between">
+                    <button type="button" class="btn btn-primary"><i class="fab fa-facebook-f"></i>Log In with Facebook</button>
+                    <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google</button>
+                </div>
+                <hr/>
+                <span class="hr">or</span>
+                <hr/>
                 <div class="form-floating mb-3">
                     <label for="firstNameInput">Enter your first name</label>
                     <input type="email" class="form-control rounded-4" id="firstNameInput" placeholder="First name">
@@ -68,14 +74,15 @@
                            placeholder="Password confirmation">
                 </div>
                 <div class="checkboxTermsServices">
-                <label class="checkbox">I’d like to receive special offers
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                </label>
-                <div class="termsPolicy">
-                    <i class="fal fa-info-circle"></i> By signing up, I agree to BuildNRate's <a href="/">Terms of
-                    Service</a> and <a href="/">Privacy Policy</a>
-                </div>
+                    <label class="checkbox d-flex">I’d like to receive special offers
+                        <input type="checkbox">
+                        <span class="checkmark d-flex"></span>
+                    </label>
+                    <div class="termsPolicy">
+                        <i class="fas fa-info-circle fa-lg"></i> By signing up, I agree to BuildNRate's <a href="/">Terms
+                        of
+                        Service</a> and <a href="/">Privacy Policy</a>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer text-center">
@@ -85,5 +92,6 @@
         </div>
     </div>
 </div>
+<!-- End of Sign Up Modal -->
 </body>
 </html>

@@ -8,99 +8,164 @@
 //@media (min-width: 992px) { ... }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .signUpContainer {
-    max-width: 760px;
-    width: 760px;
-    margin: 0 auto;
-    padding: 5.2% 8.5%;
-    border-radius: 20px;
+//@media (min-width: 1200px) {}
 
+.checkmark:after {
+  content: "";
+  display: none;
+}
+
+input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.signUpContainer {
+  max-width: 760px;
+  width: 760px;
+  margin: 0 auto;
+  padding: 5.2% 8.5%;
+  border-radius: 20px;
+
+  p {
+    font-size: 16px;
 
     a {
-      color: #BE1827;
-      text-decoration: none;
+      font-size: 16px;
+    }
+  }
+
+  a {
+    color: #BE1827;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+
+  .modal-header {
+
+    span {
+      font-size: 36px;
+      font-weight: bold;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    border-bottom: none;
+  }
 
-    .checkboxTermsServices {
-      max-width: 50%;
+  .modal-body {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 
-      .termsPolicy {
-        font-size: 14px;
-        color: #4E4E4E;
-      }
-    }
+    .loginWith {
+      min-width: 100%;
 
-    .checkbox {
-      font-size: 14px;
-
-      .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        background: transparent;
-        border: 1px solid black;
-      }
-
-      input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-      }
-
-      input:checked ~ .checkmark {
-        background-color: #BE1827;
-      }
-    }
-
-    .modal-header {
-
-      span {
-        font-size: 36px;
-        font-weight: bold;
-      }
-
-      border-bottom: none;
-    }
-
-    .modal-body {
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-content: center;
-      align-items: center;
-
-      .form-floating {
-        font-size: 14px;
-        color: #7D7F87;
+      button {
+        min-height: 59px;
         min-width: 45.5%;
+        margin-bottom: 2%;
+        border: 1px solid #ACACAC;
+        border-radius: 4px;
+        font-size: 16px;
 
-        .form-control {
-          font-size: 16px;
-          min-height: 59px;
+        i {
+          margin-right: 4%;
         }
       }
     }
-  }
 
+    .fa-google {
+      background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 72% 54%/151% 151% no-repeat;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
 
-  .modal-footer {
-    border-top: none;
+    .hr {
+      font-size: 16px;
+      color: #4E4E4E;
+    }
 
-    button {
-      width: 100%;
-      min-height: 59px;
-      background: #BE1827;
+    hr {
+      min-width: 45.5%;
+    }
+
+    .form-floating {
+      font-size: 14px;
+      color: #7D7F87;
+      min-width: 45.5%;
+
+      .form-control {
+        margin-top: -2%;
+        font-size: 16px;
+        min-height: 59px;
+      }
     }
   }
 
+  // CheckBox Custom
+  .checkboxTermsServices {
+    max-width: 50%;
+
+    .termsPolicy {
+      font-size: 14px;
+      color: #4E4E4E;
+    }
+  }
+
+  .checkbox {
+    font-size: 14px;
+    flex-flow: row-reverse;
+    justify-content: left;
+
+
+    .checkmark {
+      margin-right: 6px;
+      height: 17px;
+      width: 17px;
+      background: transparent;
+      border: 1px solid #ACACAC;
+      border-radius: 2px;
+      justify-content: center;
+    }
+
+    .checkmark:after {
+      margin-top: 1px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    input:checked ~ .checkmark {
+      background-color: #BE1827;
+    }
+  }
+}
+
+.modal-footer {
+  border-top: none;
+
+  button {
+    width: 100%;
+    font-size: 16px;
+    min-height: 59px;
+    background: #BE1827;
+  }
 }
 
 
