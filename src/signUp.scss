@@ -10,7 +10,6 @@
 // Extra large devices (large desktops, 1200px and up)
 //@media (min-width: 1200px) {}
 
-
 .signUpContainer {
   max-width: 760px;
   width: 760px;
@@ -93,6 +92,7 @@
     .form-floating.password {
       max-width: 45.5%;
     }
+
     .form-floating {
       font-size: 14px;
       color: #7D7F87;
@@ -107,6 +107,7 @@
         margin-top: -2%;
         font-size: 16px;
         min-height: 59px;
+
         .validate {
           max-width: 45.5%;
         }
@@ -168,8 +169,8 @@
       }
     }
   }
-
   // End of CheckBox Custom
+
 }
 
 .modal-footer {

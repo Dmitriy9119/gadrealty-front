@@ -16,9 +16,4 @@
         });
     }, false);
 })();
-
-// passwordInput confirm validation
-
-// END passwordInput confirm validation
-
 // End Validation SignUp
