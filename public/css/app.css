@@ -30,12 +30,10 @@ body {
     min-width: 200%;
   }
   .modal-content.sign-up-container .modal-body .loginWith {
-    display: flex;
     flex-flow: column;
     min-width: 100%;
   }
   .modal-content.sign-up-container .modal-body .loginWith button {
-    min-height: 59px;
     min-width: 100%;
   }
   .modal-content.sign-up-container .modal-body .form-floating.password {
@@ -45,7 +43,6 @@ body {
     min-width: 100%;
   }
   .modal-content.sign-up-container .modal-body .form-floating .form-control {
-    min-height: 59px;
     margin-top: -1%;
   }
   .modal-content.sign-up-container .modal-body .form-floating .form-control .validate {
@@ -53,9 +50,6 @@ body {
   }
   .modal-content.sign-up-container .modal-body .checkbox-terms-services {
     max-width: 100%;
-  }
-  .modal-content.sign-up-container .modal-footer button {
-    min-height: 59px;
   }
 }
 @media (min-width: 992px) {
@@ -67,7 +61,6 @@ body {
     flex-flow: row nowrap;
   }
   .modal-content.sign-up-container .modal-body .loginWith button {
-    min-height: 59px;
     min-width: 45.5%;
   }
   .modal-content.sign-up-container .modal-body .form-floating.password {
@@ -77,7 +70,6 @@ body {
     min-width: 45.5%;
   }
   .modal-content.sign-up-container .modal-body .form-floating .form-control {
-    min-height: 59px;
     margin-top: -2%;
   }
   .modal-content.sign-up-container .modal-body .form-floating .form-control .validate {
@@ -85,9 +77,6 @@ body {
   }
   .modal-content.sign-up-container .modal-body .checkbox-terms-services {
     max-width: 50%;
-  }
-  .modal-content.sign-up-container .modal-footer button {
-    min-height: 59px;
   }
 }
 .modal-content.sign-up-container {
