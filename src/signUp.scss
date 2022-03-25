@@ -46,9 +46,6 @@
 
   .modal-body {
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
 
     .loginWith {
       min-width: 100%;
@@ -57,10 +54,10 @@
         min-height: 59px;
         min-width: 45.5%;
         margin-bottom: 2%;
-        border: 1px solid #ACACAC;
+        border: 1px solid #ced4da;
         border-radius: 4px;
         font-size: 16px;
-
+        background: white;
         i {
           margin-right: 4%;
         }
@@ -155,6 +152,7 @@
       }
     }
   }
+  // End of CheckBox Custom
 }
 
 .modal-footer {
