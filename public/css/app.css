@@ -8,40 +8,64 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.signUpContainer {
+@media (min-width: 1200px) {
+  .sign-up-container {
+    max-width: 760px;
+    width: 760px;
+  }
+  .sign-up-container .modal-body .checkboxTermsServices {
+    max-width: 50%;
+  }
+  .sign-up-container .modal-body .form-floating.password {
+    max-width: 45.5%;
+  }
+  .sign-up-container .modal-body .form-floating {
+    min-width: 45.5%;
+  }
+  .sign-up-container .modal-body .form-floating .form-control {
+    min-height: 59px;
+  }
+  .sign-up-container .modal-body .form-floating .form-control .validate {
+    max-width: 45.5%;
+  }
+  .sign-up-container .modal-footer button {
+    min-height: 59px;
+  }
+}
+.sign-up-container {
   max-width: 760px;
   width: 760px;
   margin: 0 auto;
   padding: 5.2% 8.5%;
   border-radius: 20px;
 }
-.signUpContainer p {
+.sign-up-container p {
   font-size: 16px;
 }
-.signUpContainer p a {
+.sign-up-container p a {
   font-size: 16px;
 }
-.signUpContainer a {
+.sign-up-container a {
   color: #BE1827;
   text-decoration: none;
 }
-.signUpContainer a:hover {
+.sign-up-container a:hover {
   text-decoration: underline;
 }
-.signUpContainer .modal-header {
+.sign-up-container .modal-header {
   border-bottom: none;
 }
-.signUpContainer .modal-header span {
+.sign-up-container .modal-header span {
   font-size: 36px;
   font-weight: bold;
 }
-.signUpContainer .modal-body {
+.sign-up-container .modal-body {
   flex-flow: row wrap;
 }
-.signUpContainer .modal-body .loginWith {
+.sign-up-container .modal-body .loginWith {
   min-width: 100%;
 }
-.signUpContainer .modal-body .loginWith button {
+.sign-up-container .modal-body .loginWith button {
   min-height: 59px;
   min-width: 45.5%;
   margin-bottom: 2%;
@@ -50,62 +74,61 @@ body {
   font-size: 16px;
   background: white;
 }
-.signUpContainer .modal-body .loginWith button i {
+.sign-up-container .modal-body .loginWith button i {
   margin-right: 4%;
 }
-.signUpContainer .modal-body .fa-google {
+.sign-up-container .modal-body .fa-google {
   background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 72% 54%/151% 151% no-repeat;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-.signUpContainer .modal-body .fa-facebook-square {
+.sign-up-container .modal-body .fa-facebook-square {
   color: #3b5998;
   background-image: linear-gradient(to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
   background-size: 55%;
   background-position: 70% 0;
   background-repeat: no-repeat;
 }
-.signUpContainer .modal-body .hr {
+.sign-up-container .modal-body .hr {
   font-size: 16px;
   color: #4E4E4E;
 }
-.signUpContainer .modal-body hr {
+.sign-up-container .modal-body hr {
   min-width: 45.5%;
 }
-.signUpContainer .modal-body .form-floating.password {
+.sign-up-container .modal-body .form-floating.password {
   max-width: 45.5%;
 }
-.signUpContainer .modal-body .form-floating {
+.sign-up-container .modal-body .form-floating {
   font-size: 14px;
   color: #7D7F87;
   min-width: 45.5%;
 }
-.signUpContainer .modal-body .form-floating .invalid-feedback {
-  font-size: 12px;
-  font-weight: bold;
+.sign-up-container .modal-body .form-floating .invalid-feedback {
+  font-size: 13px;
 }
-.signUpContainer .modal-body .form-floating .form-control {
+.sign-up-container .modal-body .form-floating .form-control {
   margin-top: -2%;
   font-size: 16px;
   min-height: 59px;
 }
-.signUpContainer .modal-body .form-floating .form-control .validate {
+.sign-up-container .modal-body .form-floating .form-control .validate {
   max-width: 45.5%;
 }
-.signUpContainer .checkboxTermsServices {
+.sign-up-container .checkboxTermsServices {
   max-width: 50%;
 }
-.signUpContainer .checkboxTermsServices .termsPolicy {
+.sign-up-container .checkboxTermsServices .termsPolicy {
   font-size: 14px;
   color: #4E4E4E;
 }
-.signUpContainer .checkbox {
+.sign-up-container .checkbox {
   font-size: 14px;
   flex-flow: row-reverse;
   justify-content: left;
 }
-.signUpContainer .checkbox .checkmark {
+.sign-up-container .checkbox .checkmark {
   margin-right: 6px;
   height: 17px;
   width: 17px;
@@ -114,7 +137,7 @@ body {
   border-radius: 2px;
   justify-content: center;
 }
-.signUpContainer .checkbox .checkmark:after {
+.sign-up-container .checkbox .checkmark:after {
   content: "";
   display: block;
   margin-top: 1px;
@@ -126,17 +149,17 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.signUpContainer .checkbox .checkmark:checked {
+.sign-up-container .checkbox .checkmark:checked {
   background-color: #BE1827;
 }
-.signUpContainer .checkbox input {
+.sign-up-container .checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.signUpContainer .checkbox input:checked ~ .checkmark {
+.sign-up-container .checkbox input:checked ~ .checkmark {
   background-color: #BE1827;
 }
 

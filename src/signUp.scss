@@ -8,9 +8,46 @@
 //@media (min-width: 992px) { ... }
 
 // Extra large devices (large desktops, 1200px and up)
-//@media (min-width: 1200px) {}
 
-.signUpContainer {
+@media (min-width: 1200px) {
+  .sign-up-container {
+    max-width: 760px;
+    width: 760px;
+
+    .modal-body {
+
+      .checkboxTermsServices {
+        max-width: 50%;
+      }
+
+      .form-floating.password {
+        max-width: 45.5%;
+      }
+
+      .form-floating {
+        min-width: 45.5%;
+
+        .form-control {
+          min-height: 59px;
+
+          .validate {
+            max-width: 45.5%;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+
+      button {
+        min-height: 59px;
+      }
+    }
+  }
+}
+
+
+.sign-up-container {
   max-width: 760px;
   width: 760px;
   margin: 0 auto;
@@ -99,8 +136,7 @@
       min-width: 45.5%;
 
       .invalid-feedback {
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 13px;
       }
 
       .form-control {
@@ -169,6 +205,7 @@
       }
     }
   }
+
   // End of CheckBox Custom
 
 }
