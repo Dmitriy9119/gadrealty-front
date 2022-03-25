@@ -73,15 +73,25 @@ body {
 .signUpContainer .modal-body hr {
   min-width: 45.5%;
 }
+.signUpContainer .modal-body .form-floating.password {
+  max-width: 45.5%;
+}
 .signUpContainer .modal-body .form-floating {
   font-size: 14px;
   color: #7D7F87;
   min-width: 45.5%;
 }
+.signUpContainer .modal-body .form-floating .invalid-feedback {
+  font-size: 12px;
+  font-weight: bold;
+}
 .signUpContainer .modal-body .form-floating .form-control {
   margin-top: -2%;
   font-size: 16px;
   min-height: 59px;
+}
+.signUpContainer .modal-body .form-floating .form-control .validate {
+  max-width: 45.5%;
 }
 .signUpContainer .checkboxTermsServices {
   max-width: 50%;

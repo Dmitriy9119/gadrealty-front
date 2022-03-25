@@ -29,6 +29,7 @@
   a {
     color: #BE1827;
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
@@ -58,6 +59,7 @@
         border-radius: 4px;
         font-size: 16px;
         background: white;
+
         i {
           margin-right: 4%;
         }
@@ -73,7 +75,7 @@
 
     .fa-facebook-square {
       color: #3b5998;
-      background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93% );
+      background-image: linear-gradient(to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
       background-size: 55%;
       background-position: 70% 0;
       background-repeat: no-repeat;
@@ -88,15 +90,26 @@
       min-width: 45.5%;
     }
 
+    .form-floating.password {
+      max-width: 45.5%;
+    }
     .form-floating {
       font-size: 14px;
       color: #7D7F87;
       min-width: 45.5%;
 
+      .invalid-feedback {
+        font-size: 12px;
+        font-weight: bold;
+      }
+
       .form-control {
         margin-top: -2%;
         font-size: 16px;
         min-height: 59px;
+        .validate {
+          max-width: 45.5%;
+        }
       }
     }
   }
@@ -124,6 +137,7 @@
       border: 1px solid #ACACAC;
       border-radius: 2px;
       justify-content: center;
+
       &:after {
         content: "";
         display: block;
@@ -136,7 +150,8 @@
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
       }
-      &:checked{
+
+      &:checked {
         background-color: #BE1827;
       }
     }
@@ -147,11 +162,13 @@
       cursor: pointer;
       height: 0;
       width: 0;
+
       &:checked ~ .checkmark {
         background-color: #BE1827;
       }
     }
   }
+
   // End of CheckBox Custom
 }
 
