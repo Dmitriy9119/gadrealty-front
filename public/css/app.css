@@ -8,127 +8,152 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-@media (min-width: 1200px) {
-  .sign-up-container {
-    max-width: 760px;
-    width: 760px;
-  }
-  .sign-up-container .modal-body .checkboxTermsServices {
-    max-width: 50%;
-  }
-  .sign-up-container .modal-body .form-floating.password {
-    max-width: 45.5%;
-  }
-  .sign-up-container .modal-body .form-floating {
-    min-width: 45.5%;
-  }
-  .sign-up-container .modal-body .form-floating .form-control {
-    min-height: 59px;
-  }
-  .sign-up-container .modal-body .form-floating .form-control .validate {
-    max-width: 45.5%;
-  }
-  .sign-up-container .modal-footer button {
-    min-height: 59px;
-  }
-}
-.sign-up-container {
-  max-width: 760px;
-  width: 760px;
-  margin: 0 auto;
-  padding: 5.2% 8.5%;
-  border-radius: 20px;
-}
-.sign-up-container p {
-  font-size: 16px;
-}
-.sign-up-container p a {
-  font-size: 16px;
-}
-.sign-up-container a {
-  color: #BE1827;
-  text-decoration: none;
-}
-.sign-up-container a:hover {
-  text-decoration: underline;
-}
-.sign-up-container .modal-header {
-  border-bottom: none;
-}
-.sign-up-container .modal-header span {
-  font-size: 36px;
-  font-weight: bold;
-}
-.sign-up-container .modal-body {
-  flex-flow: row wrap;
-}
-.sign-up-container .modal-body .loginWith {
-  min-width: 100%;
-}
-.sign-up-container .modal-body .loginWith button {
-  min-height: 59px;
-  min-width: 45.5%;
-  margin-bottom: 2%;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  font-size: 16px;
-  background: white;
-}
-.sign-up-container .modal-body .loginWith button i {
-  margin-right: 4%;
-}
-.sign-up-container .modal-body .fa-google {
+.fa-google {
   background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 72% 54%/151% 151% no-repeat;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
-.sign-up-container .modal-body .fa-facebook-square {
+
+.fa-facebook-square {
   color: #3b5998;
   background-image: linear-gradient(to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
   background-size: 55%;
   background-position: 70% 0;
   background-repeat: no-repeat;
 }
-.sign-up-container .modal-body .hr {
+
+@media (min-width: 768px) {
+  .modal-content.sign-up-container {
+    max-width: 768px;
+    margin: -10% -50%;
+    min-width: 200%;
+  }
+  .modal-content.sign-up-container .modal-body .loginWith {
+    display: flex;
+    flex-flow: column;
+    min-width: 100%;
+  }
+  .modal-content.sign-up-container .modal-body .loginWith button {
+    min-height: 59px;
+    min-width: 100%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating.password {
+    max-width: 100%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating {
+    min-width: 100%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating .form-control {
+    min-height: 59px;
+    margin-top: -1%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating .form-control .validate {
+    max-width: 100%;
+  }
+  .modal-content.sign-up-container .modal-body .checkbox-terms-services {
+    max-width: 100%;
+  }
+  .modal-content.sign-up-container .modal-footer button {
+    min-height: 59px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-content.sign-up-container {
+    max-width: 760px;
+    width: 760px;
+  }
+  .modal-content.sign-up-container .modal-body .loginWith {
+    flex-flow: row nowrap;
+  }
+  .modal-content.sign-up-container .modal-body .loginWith button {
+    min-height: 59px;
+    min-width: 45.5%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating.password {
+    max-width: 45.5%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating {
+    min-width: 45.5%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating .form-control {
+    min-height: 59px;
+    margin-top: -2%;
+  }
+  .modal-content.sign-up-container .modal-body .form-floating .form-control .validate {
+    max-width: 45.5%;
+  }
+  .modal-content.sign-up-container .modal-body .checkbox-terms-services {
+    max-width: 50%;
+  }
+  .modal-content.sign-up-container .modal-footer button {
+    min-height: 59px;
+  }
+}
+.modal-content.sign-up-container {
+  padding: 5.2% 8.5%;
+  border-radius: 20px;
+}
+.modal-content.sign-up-container p {
+  font-size: 16px;
+}
+.modal-content.sign-up-container p a {
+  font-size: 16px;
+}
+.modal-content.sign-up-container a {
+  color: #BE1827;
+  text-decoration: none;
+}
+.modal-content.sign-up-container a:hover {
+  text-decoration: underline;
+}
+.modal-content.sign-up-container .modal-header {
+  border-bottom: none;
+}
+.modal-content.sign-up-container .modal-header span {
+  font-size: 36px;
+  font-weight: bold;
+}
+.modal-content.sign-up-container .modal-body {
+  flex-flow: row wrap;
+}
+.modal-content.sign-up-container .modal-body .loginWith button {
+  margin-bottom: 2%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+}
+.modal-content.sign-up-container .modal-body .loginWith button i {
+  margin-right: 4%;
+}
+.modal-content.sign-up-container .modal-body .hr {
   font-size: 16px;
   color: #4E4E4E;
 }
-.sign-up-container .modal-body hr {
+.modal-content.sign-up-container .modal-body hr {
   min-width: 45.5%;
 }
-.sign-up-container .modal-body .form-floating.password {
-  max-width: 45.5%;
-}
-.sign-up-container .modal-body .form-floating {
+.modal-content.sign-up-container .modal-body .form-floating {
   font-size: 14px;
   color: #7D7F87;
-  min-width: 45.5%;
 }
-.sign-up-container .modal-body .form-floating .invalid-feedback {
+.modal-content.sign-up-container .modal-body .form-floating .invalid-feedback {
   font-size: 13px;
 }
-.sign-up-container .modal-body .form-floating .form-control {
-  margin-top: -2%;
+.modal-content.sign-up-container .modal-body .form-floating .form-control {
   font-size: 16px;
-  min-height: 59px;
 }
-.sign-up-container .modal-body .form-floating .form-control .validate {
-  max-width: 45.5%;
-}
-.sign-up-container .checkboxTermsServices {
-  max-width: 50%;
-}
-.sign-up-container .checkboxTermsServices .termsPolicy {
+.modal-content.sign-up-container .modal-body .checkbox-terms-services .termsPolicy {
   font-size: 14px;
   color: #4E4E4E;
 }
-.sign-up-container .checkbox {
+.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox {
   font-size: 14px;
   flex-flow: row-reverse;
   justify-content: left;
 }
-.sign-up-container .checkbox .checkmark {
+.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox .checkmark {
   margin-right: 6px;
   height: 17px;
   width: 17px;
@@ -137,7 +162,7 @@ body {
   border-radius: 2px;
   justify-content: center;
 }
-.sign-up-container .checkbox .checkmark:after {
+.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox .checkmark:after {
   content: "";
   display: block;
   margin-top: 1px;
@@ -149,17 +174,17 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.sign-up-container .checkbox .checkmark:checked {
+.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox .checkmark:checked {
   background-color: #BE1827;
 }
-.sign-up-container .checkbox input {
+.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.sign-up-container .checkbox input:checked ~ .checkmark {
+.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox input:checked ~ .checkmark {
   background-color: #BE1827;
 }
 

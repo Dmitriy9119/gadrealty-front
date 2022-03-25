@@ -2,38 +2,48 @@
 //@media (min-width: 576px) { ... }
 
 // Medium devices (tablets, 768px and up)
-//@media (min-width: 768px) { ... }
+@media (min-width: 768px) {
 
-// Large devices (desktops, 992px and up)
-//@media (min-width: 992px) { ... }
 
-// Extra large devices (large desktops, 1200px and up)
-
-@media (min-width: 1200px) {
-  .sign-up-container {
-    max-width: 760px;
-    width: 760px;
+  .modal-content.sign-up-container {
+    max-width: 768px;
+    margin: -10% -50%;
+    min-width: 200%;
 
     .modal-body {
 
-      .checkboxTermsServices {
-        max-width: 50%;
+      .loginWith {
+        display: flex;
+        flex-flow: column;
+        min-width: 100%;
+
+        button {
+          min-height: 59px;
+          min-width: 100%;
+        }
       }
 
       .form-floating.password {
-        max-width: 45.5%;
+        max-width: 100%;
       }
 
       .form-floating {
-        min-width: 45.5%;
+        min-width: 100%;
+
 
         .form-control {
           min-height: 59px;
+          margin-top: -1%;
+
 
           .validate {
-            max-width: 45.5%;
+            max-width: 100%;
           }
         }
+      }
+
+      .checkbox-terms-services {
+        max-width: 100%;
       }
     }
 
@@ -45,12 +55,60 @@
     }
   }
 }
+//end of Medium devices (tablets, 768px and up)
 
 
-.sign-up-container {
-  max-width: 760px;
-  width: 760px;
-  margin: 0 auto;
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .modal-content.sign-up-container {
+    max-width: 760px;
+    width: 760px;
+
+    .modal-body {
+
+      .loginWith {
+        flex-flow: row nowrap;
+
+        button {
+          min-height: 59px;
+          min-width: 45.5%;
+        }
+      }
+
+      .form-floating.password {
+        max-width: 45.5%;
+      }
+
+      .form-floating {
+        min-width: 45.5%;
+
+        .form-control {
+          min-height: 59px;
+          margin-top: -2%;
+
+          .validate {
+            max-width: 45.5%;
+          }
+        }
+      }
+
+      .checkbox-terms-services {
+        max-width: 50%;
+      }
+    }
+
+    .modal-footer {
+
+      button {
+        min-height: 59px;
+      }
+    }
+  }
+}
+//end of Large devices (desktops, 992px and up)
+
+
+.modal-content.sign-up-container {
   padding: 5.2% 8.5%;
   border-radius: 20px;
 
@@ -85,11 +143,8 @@
     flex-flow: row wrap;
 
     .loginWith {
-      min-width: 100%;
 
       button {
-        min-height: 59px;
-        min-width: 45.5%;
         margin-bottom: 2%;
         border: 1px solid #ced4da;
         border-radius: 4px;
@@ -102,21 +157,6 @@
       }
     }
 
-    .fa-google {
-      background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 72% 54%/151% 151% no-repeat;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .fa-facebook-square {
-      color: #3b5998;
-      background-image: linear-gradient(to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
-      background-size: 55%;
-      background-position: 70% 0;
-      background-repeat: no-repeat;
-    }
-
     .hr {
       font-size: 16px;
       color: #4E4E4E;
@@ -126,88 +166,76 @@
       min-width: 45.5%;
     }
 
-    .form-floating.password {
-      max-width: 45.5%;
-    }
-
     .form-floating {
       font-size: 14px;
       color: #7D7F87;
-      min-width: 45.5%;
 
       .invalid-feedback {
         font-size: 13px;
       }
 
       .form-control {
-        margin-top: -2%;
         font-size: 16px;
-        min-height: 59px;
 
-        .validate {
-          max-width: 45.5%;
+      }
+    }
+
+    // -------------------------------CheckBox Custom
+    .checkbox-terms-services {
+
+      .termsPolicy {
+        font-size: 14px;
+        color: #4E4E4E;
+      }
+
+      .checkbox {
+        font-size: 14px;
+        flex-flow: row-reverse;
+        justify-content: left;
+
+        .checkmark {
+          margin-right: 6px;
+          height: 17px;
+          width: 17px;
+          background: transparent;
+          border: 1px solid #ACACAC;
+          border-radius: 2px;
+          justify-content: center;
+
+          &:after {
+            content: "";
+            display: block;
+            margin-top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+
+          &:checked {
+            background-color: #BE1827;
+          }
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+
+          &:checked ~ .checkmark {
+            background-color: #BE1827;
+          }
         }
       }
     }
+
+    // --------------------------------------End of CheckBox Custom
   }
-
-  // CheckBox Custom
-  .checkboxTermsServices {
-    max-width: 50%;
-
-    .termsPolicy {
-      font-size: 14px;
-      color: #4E4E4E;
-    }
-  }
-
-  .checkbox {
-    font-size: 14px;
-    flex-flow: row-reverse;
-    justify-content: left;
-
-    .checkmark {
-      margin-right: 6px;
-      height: 17px;
-      width: 17px;
-      background: transparent;
-      border: 1px solid #ACACAC;
-      border-radius: 2px;
-      justify-content: center;
-
-      &:after {
-        content: "";
-        display: block;
-        margin-top: 1px;
-        width: 5px;
-        height: 10px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-
-      &:checked {
-        background-color: #BE1827;
-      }
-    }
-
-    input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-
-      &:checked ~ .checkmark {
-        background-color: #BE1827;
-      }
-    }
-  }
-
-  // End of CheckBox Custom
-
 }
 
 .modal-footer {
