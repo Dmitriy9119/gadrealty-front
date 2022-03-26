@@ -4,15 +4,12 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 
-
   .modal-content.sign-up-container {
-    max-width: 768px;
-    margin: -10% -50%;
-    min-width: 200%;
+    min-width: 160%;
 
     .modal-body {
 
-      .loginWith {
+      .login-with {
         flex-flow: column;
         min-width: 100%;
 
@@ -21,8 +18,8 @@
         }
       }
 
-      .form-floating.password {
-        max-width: 100%;
+      .needs-validation {
+        min-width: 100%;
       }
 
       .form-floating {
@@ -52,21 +49,21 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .modal-content.sign-up-container {
-    max-width: 760px;
-    width: 760px;
 
     .modal-body {
 
-      .loginWith {
+      .login-with {
         flex-flow: row nowrap;
 
         button {
           min-width: 45.5%;
         }
       }
-
-      .form-floating.password {
+      .needs-validation.password{
         max-width: 45.5%;
+      }
+      .needs-validation {
+        min-width: 45.5%;
       }
 
       .form-floating {
@@ -90,9 +87,8 @@
 
 //end of Large devices (desktops, 992px and up)
 
-
 .modal-content.sign-up-container {
-  padding: 5.2% 8.5%;
+  padding: 4.7% 7%;
   border-radius: 20px;
 
   p {
@@ -125,7 +121,7 @@
   .modal-body {
     flex-flow: row wrap;
 
-    .loginWith {
+    .login-with {
 
       button {
         margin-bottom: 2%;
@@ -153,7 +149,7 @@
       font-size: 14px;
       color: #7D7F87;
 
-      .invalid-feedback {
+      .invalid-feedback, .valid-feedback {
         font-size: 13px;
       }
 

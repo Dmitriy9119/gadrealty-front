@@ -31,8 +31,8 @@
 <!-- Sign Up Modal -->
 <div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUpTitle"
      aria-hidden="true">
-    <div class="modal-dialog modal-dialog-center" role="document">
-        <form class="needs-validation" novalidate action="/somelinkHere"
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <form id="mainForm" class="needs-validation sign-up d-flex justify-content-around" novalidate action="/LinkToSomeURL"
               oninput='passwordConfirmationInput.setCustomValidity(passwordConfirmationInput.value !== passwordInput.value ? "Passwords do not match." : "")'>
             <div class="modal-content sign-up-container">
                 <div class="modal-header">
@@ -42,67 +42,84 @@
                     </button>
                 </div>
                 <div class="modal-body d-flex justify-content-between">
-                    <div class="loginWith d-flex justify-content-between">
+                    <div class="login-with d-flex justify-content-between">
                         <button type="button" class="btn btn-light"><i class="fab fa-facebook-square fa-lg"></i>Log
                             In with Facebook
                         </button>
                         <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google
                         </button>
                     </div>
-                    <hr/>
-                    <span class="hr">or</span>
-                    <hr/>
-                    <div class="form-floating mb-3">
-                        <label for="firstNameInput">Enter your first name</label>
-                        <input type="text" class="form-control rounded-4" id="firstNameInput"
-                               placeholder="First name" pattern="^[a-z,A-Z]{2,100}$" required>
-                        <div class="invalid-feedback">
-                            Please enter your first name <i class="fas fa-arrow-up"></i>
+                    <form>
+                        <hr/>
+                        <span class="hr">or</span>
+                        <hr/>
+                    </form>
+                    <form id="firstName" class="needs-validation" novalidate>
+                        <div class="form-floating mb-3">
+                            <label for="firstNameInput">Enter your first name</label>
+                            <input type="text" class="form-control rounded-4" id="firstNameInput"
+                                   placeholder="First name" pattern="^[a-z,A-Z]{2,100}$" required>
+                            <div class="invalid-feedback">
+                                Please enter your first name <i class="fas fa-arrow-up"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <label for="lastNameInput">Enter your last name</label>
-                        <input type="text" class="form-control rounded-4" id="lastNameInput" placeholder="Last name"
-                               pattern="^[a-z,A-Z]{2,100}$" required>
-                        <div class="invalid-feedback">
-                            Please enter your last name <i class="fas fa-arrow-up"></i>
+                    </form>
+                    <form id="lastName" class="needs-validation" novalidate>
+                        <div class="form-floating mb-3">
+                            <label for="lastNameInput">Enter your last name</label>
+                            <input type="text" class="form-control rounded-4" id="lastNameInput" placeholder="Last name"
+                                   pattern="^[a-z,A-Z]{2,100}$" required>
+                            <div class="invalid-feedback">
+                                Please enter your last name <i class="fas fa-arrow-up"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <label for="emailInput">Enter your email</label>
-                        <input type="email" class="form-control rounded-4" id="emailInput"
-                               placeholder="Email address" required>
-                        <div class="invalid-feedback">
-                            Please enter your valid email <i class="fas fa-arrow-up"></i>
+                    </form>
+                    <form id="email" class="needs-validation" novalidate>
+                        <div class="form-floating mb-3">
+                            <label for="emailInput">Enter your email</label>
+                            <input type="email" class="form-control rounded-4" id="emailInput"
+                                   placeholder="Email address" required>
+                            <div class="invalid-feedback">
+                                Please enter your valid email <i class="fas fa-arrow-up"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <label for="birthdayInput">Birthday</label>
-                        <input type="date" class="form-control rounded-4" id="birthdayInput" required>
-                        <div class="invalid-feedback">
-                            Please choose date <i class="fas fa-arrow-up"></i>
+                    </form>
+                    <form id="birthday" class="needs-validation" novalidate>
+                        <div class="form-floating mb-3">
+                            <label for="birthdayInput">Birthday</label>
+                            <input type="date" class="form-control rounded-4" id="birthdayInput" required>
+                            <div class="invalid-feedback">
+                                Please choose date <i class="fas fa-arrow-up"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-floating mb-3 password">
-                        <label for="passwordInput">Enter your password</label>
-                        <input type="password" class="form-control rounded-4 validate" id="passwordInput"
-                               name="passwordInput" placeholder="Password"
-                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
-                        <div class="invalid-feedback password">
-                            Password must be at least 8 characters long
-                            and contain one capital and lowercase letters, and one of the special characters:
-                            !@#$%^&*_=+-
+                    </form>
+                    <form id="password" class="needs-validation password" novalidate>
+                        <div class="form-floating mb-3">
+                            <label for="passwordInput">Enter your password</label>
+                            <input type="password" class="form-control rounded-4 validate" id="passwordInput"
+                                   name="passwordInput" placeholder="Password"
+                                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
+                            <div class="invalid-feedback">
+                                Password must be at least 8 characters long
+                                and contain one capital and lowercase letters, and one of the special characters:
+                                !@#$%^&*_=+-
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <label for="passwordConfirmationInput">Enter your password again</label>
-                        <input type="password" class="form-control rounded-4" id="passwordConfirmationInput"
-                               name="passwordConfirmationInput" placeholder="Password confirmation"
-                               required>
-                        <div class="invalid-feedback">
-                            Passwords do not match <i class="fas fa-arrow-up"></i>
+                    </form>
+                    <form id="passwordConfirmation" class="needs-validation" novalidate>
+                        <div class="form-floating mb-3">
+                            <label for="passwordConfirmationInput">Enter your password again</label>
+                            <input type="password" class="form-control rounded-4" id="passwordConfirmationInput"
+                                   name="passwordConfirmationInput" placeholder="Password confirmation"
+                                   required>
+                            <div class="invalid-feedback">
+                                Passwords do not match <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="valid-feedback">
+                                Great! Passwords matched
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <div class="checkbox-terms-services">
                         <label class="checkbox d-flex">I’d like to receive special offers
                             <input type="checkbox" checked="checked">
