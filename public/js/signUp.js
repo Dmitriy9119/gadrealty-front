@@ -36,9 +36,7 @@
                 forms[i].classList.add('was-validated')
                 forms[i].checkValidity() && check.push(true)
             }
-            if (check.length === forms.length) {
-                console.log('validated successfully') //что-то делаем дальше...
-            } else {
+            if (check.length !== forms.length) {
                 event.preventDefault()
                 event.stopPropagation()
             }
