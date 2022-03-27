@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
           integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
           crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+          integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
     <!-- jQuery (Cloudflare CDN) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -15,12 +21,7 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"
             integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
-          integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
 
 </head>
 <body>
@@ -29,11 +30,11 @@
     Sign Up
 </button>
 <!-- Sign Up Modal -->
-<div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUpTitle"
+<div class="modal fade sign-up" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUpTitle"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <form id="mainForm" class="needs-validation sign-up d-flex justify-content-around" novalidate action="/LinkToSomeURL"
-              oninput='passwordConfirmationInput.setCustomValidity(passwordConfirmationInput.value !== passwordInput.value ? "Passwords do not match." : "")'>
+        <div id="mainForm" class="needs-validation sign-up d-flex justify-content-around"
+             oninput='passwordConfirmationInput.setCustomValidity(passwordConfirmationInput.value !== passwordInput.value ? "Passwords do not match." : "")'>
             <div class="modal-content sign-up-container">
                 <div class="modal-header">
                     <span class="col-12 modal-title text-center" id="exampleModalLongTitle">Sign Up</span>
@@ -49,11 +50,9 @@
                         <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google
                         </button>
                     </div>
-                    <form>
-                        <hr/>
-                        <span class="hr">or</span>
-                        <hr/>
-                    </form>
+                    <hr/>
+                    <span class="hr">or</span>
+                    <hr/>
                     <form id="firstName" class="needs-validation" novalidate>
                         <div class="form-floating mb-3">
                             <label for="firstNameInput">Enter your first name</label>
@@ -94,11 +93,15 @@
                         </div>
                     </form>
                     <form id="password" class="needs-validation password" novalidate>
-                        <div class="form-floating mb-3">
+                        <div class="form-floating password mb-3">
                             <label for="passwordInput">Enter your password</label>
                             <input type="password" class="form-control rounded-4 validate" id="passwordInput"
                                    name="passwordInput" placeholder="Password"
                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
+                            <button name="passwordInput" type="button" class="btn"
+                                    onclick="handleShowHidePassword(event)">
+                                <i id="passwordInputIcon" class="fa icon-eye-open fa-eye" title="Show your password"></i>
+                            </button>
                             <div class="invalid-feedback">
                                 Password must be at least 8 characters long
                                 and contain one capital and lowercase letters, and one of the special characters:
@@ -106,12 +109,16 @@
                             </div>
                         </div>
                     </form>
-                    <form id="passwordConfirmation" class="needs-validation" novalidate>
-                        <div class="form-floating mb-3">
+                    <form id="passwordConfirmation" class="needs-validation password" novalidate>
+                        <div class="form-floating password mb-3">
                             <label for="passwordConfirmationInput">Enter your password again</label>
                             <input type="password" class="form-control rounded-4" id="passwordConfirmationInput"
                                    name="passwordConfirmationInput" placeholder="Password confirmation"
                                    required>
+                            <button name="passwordConfirmationInput" type="button" class="btn"
+                                    onclick="handleShowHidePassword(event)">
+                                <i id="passwordConfirmationInputIcon" class="fa icon-eye-open fa-eye"  title="Show your password"></i>
+                            </button>
                             <div class="invalid-feedback">
                                 Passwords do not match <i class="fas fa-arrow-up"></i>
                             </div>
@@ -134,11 +141,13 @@
                     </div>
                 </div>
                 <div class="modal-footer text-center">
-                    <button id="submitButton" class="btn btn-danger" type="submit">Sign up</button>
+                    <button id="submitButton" class="btn btn-danger" type="button" onclick="handleValidation(event)">
+                        Sign up
+                    </button>
                 </div>
                 <p class="text-center">Already have an account? <a href="/">Sign in</a></p>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 <!-- End of Sign Up Modal -->

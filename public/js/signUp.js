@@ -1,4 +1,4 @@
-// // Validation SignUp
+// Validation on input's value change...-----------------------------------------------
 (function () {
     'use strict';
     window.addEventListener('load', function () {
@@ -26,22 +26,55 @@
                 }, false);
             }
         });
-
-        // Validation of all inputs after submit button click
-        const submitButton = document.getElementById('submitButton');
-        submitButton.addEventListener('click', function (event) {
-            const check = [];
-            const forms = $('.needs-validation');
-            for (let i = 0; i < forms.length; i++) {
-                forms[i].classList.add('was-validated')
-                forms[i].checkValidity() && check.push(true)
-            }
-            if (check.length !== forms.length) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-        }, false);
     }, false);
 })();
-// // End Validation SignUp
+
+// Validation of all inputs after Sig Up button click----------------------------------
+function handleValidation(event) {
+    const check = [];
+    const forms = $('.needs-validation');
+    forms.toArray().map(form => {
+        if (form.id === "mainForm") {
+            check.push(true)
+        } else {
+            form.classList.add('was-validated')
+            form.checkValidity() && check.push(true)
+        }
+    })
+    if (check.length !== forms.length) {
+        event.preventDefault()
+        event.stopPropagation()
+    } else {
+        window.location.replace("/url");  // ------------------go to some URL, if all inputs are valid
+    }
+}
+
+// Validation of all inputs after Enter button press-------------------------------------------
+document.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        const modalVisible = document.getElementsByClassName('modal fade sign-up show')
+        if (modalVisible.length) {
+            event.preventDefault()
+            event.stopPropagation()
+            handleValidation(event)
+        }
+    }
+}, false);
+
+
+// show/hide password button------------------------------------------------------------------
+function handleShowHidePassword(event) {
+    const input = document.getElementById(event.currentTarget.name);
+    const icon = document.getElementById(`${event.currentTarget.name}Icon`)
+    if (input.type === "password") {
+        input.type = "text"
+        icon.className = "fa icon-eye-close fa-eye-slash"
+        icon.title = "Hide your password"
+    } else {
+        input.type = "password"
+        icon.title = "Show your password"
+        icon.className = "fa icon-eye-open fa-eye"
+    }
+}
+
 

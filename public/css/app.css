@@ -23,10 +23,17 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 300px) {
+  .modal-content.sign-up-container {
+    min-width: 80%;
+  }
+}
 @media (min-width: 768px) {
   .modal-content.sign-up-container {
-    min-width: 160%;
+    min-width: 140%;
   }
+}
+@media (min-width: 300px), (min-width: 768px) {
   .modal-content.sign-up-container .modal-body .login-with {
     flex-flow: column;
     min-width: 100%;
@@ -40,8 +47,8 @@ body {
   .modal-content.sign-up-container .modal-body .form-floating {
     min-width: 100%;
   }
-  .modal-content.sign-up-container .modal-body .form-floating .form-control {
-    margin-top: -1%;
+  .modal-content.sign-up-container .modal-body .form-floating label {
+    margin-bottom: 1%;
   }
   .modal-content.sign-up-container .modal-body .form-floating .form-control .validate {
     max-width: 100%;
@@ -60,14 +67,17 @@ body {
   .modal-content.sign-up-container .modal-body .needs-validation.password {
     max-width: 45.5%;
   }
+  .modal-content.sign-up-container .modal-body .needs-validation.passwordConfirmation {
+    max-width: 45.5%;
+  }
   .modal-content.sign-up-container .modal-body .needs-validation {
     min-width: 45.5%;
   }
   .modal-content.sign-up-container .modal-body .form-floating {
     min-width: 45.5%;
   }
-  .modal-content.sign-up-container .modal-body .form-floating .form-control {
-    margin-top: -2%;
+  .modal-content.sign-up-container .modal-body .form-floating label {
+    margin-bottom: 1.5%;
   }
   .modal-content.sign-up-container .modal-body .form-floating .form-control .validate {
     max-width: 45.5%;
@@ -116,9 +126,33 @@ body {
 .modal-content.sign-up-container .modal-body .hr {
   font-size: 16px;
   color: #4E4E4E;
+  margin: 1% auto;
 }
 .modal-content.sign-up-container .modal-body hr {
-  min-width: 45.5%;
+  width: 45.5%;
+}
+.modal-content.sign-up-container .modal-body .form-floating.password {
+  display: grid;
+  grid-template-areas: "l l" "i b" "w w";
+  grid-template-columns: auto 15%;
+}
+.modal-content.sign-up-container .modal-body .form-floating.password label {
+  grid-area: l;
+}
+.modal-content.sign-up-container .modal-body .form-floating.password .form-control {
+  grid-area: i;
+}
+.modal-content.sign-up-container .modal-body .form-floating.password .btn {
+  margin-left: -2%;
+  grid-area: b;
+  border: 1px solid #ced4da;
+  border-left: transparent;
+}
+.modal-content.sign-up-container .modal-body .form-floating.password .btn:focus {
+  box-shadow: none;
+}
+.modal-content.sign-up-container .modal-body .form-floating.password .invalid-feedback, .modal-content.sign-up-container .modal-body .form-floating.password .valid-feedback {
+  grid-area: w;
 }
 .modal-content.sign-up-container .modal-body .form-floating {
   font-size: 14px;

@@ -1,11 +1,19 @@
-// Small devices (landscape phones, 576px and up)
-//@media (min-width: 576px) { ... }
+@media (min-width: 300px) {
+  .modal-content.sign-up-container {
+    min-width: 80%;
+  }
+}
 
-// Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .modal-content.sign-up-container {
+    min-width: 140%;
+  }
+}
+
+// Medium devices (300px and up, 768px and up)
+@media (min-width: 300px), (min-width: 768px) {
 
   .modal-content.sign-up-container {
-    min-width: 160%;
 
     .modal-body {
 
@@ -25,9 +33,11 @@
       .form-floating {
         min-width: 100%;
 
+        label {
+          margin-bottom: 1%;
+        }
 
         .form-control {
-          margin-top: -1%;
 
 
           .validate {
@@ -43,8 +53,6 @@
   }
 }
 
-//end of Medium devices (tablets, 768px and up)
-
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
@@ -59,9 +67,15 @@
           min-width: 45.5%;
         }
       }
-      .needs-validation.password{
+
+      .needs-validation.password {
         max-width: 45.5%;
       }
+
+      .needs-validation.passwordConfirmation {
+        max-width: 45.5%;
+      }
+
       .needs-validation {
         min-width: 45.5%;
       }
@@ -69,8 +83,11 @@
       .form-floating {
         min-width: 45.5%;
 
+        label {
+          margin-bottom: 1.5%;
+        }
+
         .form-control {
-          margin-top: -2%;
 
           .validate {
             max-width: 45.5%;
@@ -139,15 +156,48 @@
     .hr {
       font-size: 16px;
       color: #4E4E4E;
+      margin: 1% auto;
     }
 
     hr {
-      min-width: 45.5%;
+      width: 45.5%;
     }
+
+    .form-floating.password {
+      display: grid;
+      grid-template-areas: 'l l' 'i b' 'w w';
+      grid-template-columns: auto 15%;
+
+      label {
+        grid-area: l;
+      }
+
+      .form-control {
+        grid-area: i;
+      }
+
+      .btn {
+        margin-left: -2%;
+        grid-area: b;
+        border: 1px solid #ced4da;
+        border-left: transparent;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+      }
+
+      .invalid-feedback, .valid-feedback {
+        grid-area: w;
+      }
+    }
+
 
     .form-floating {
       font-size: 14px;
       color: #7D7F87;
+
 
       .invalid-feedback, .valid-feedback {
         font-size: 13px;
