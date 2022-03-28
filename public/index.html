@@ -28,123 +28,215 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sign-up">
     Sign Up
 </button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sign-in">
+    Sign In
+</button>
 <!-- Sign Up Modal -->
-<div class="modal fade sign-up" id="modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="modals-sign-up-title"
+<div class="modal fade" id="modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="modals-sign-up-title"
      aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <form id="main-form-sign-up" class="needs-validation sign-up d-flex justify-content-around" novalidate action="/GoToURL"
-              method="POST"
-              oninput='passwordConfirmationInput.setCustomValidity(passwordConfirmationInput.value !== passwordInput.value ? false : "")'>
-            <div class="modal-content sign-up-container">
-                <div class="modal-header">
-                    <span class="col-12 modal-title text-center" id="modal-title">Sign Up</span>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body d-flex justify-content-between">
-                    <div class="login-with d-flex justify-content-between">
-                        <button type="button" class="btn btn-light"><i class="fab fa-facebook-square fa-lg"></i>Log
-                            In with Facebook
-                        </button>
-                        <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google
+    <div class="sign-up">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form id="main-form-sign-up" name="mainFormSignUp" class="needs-validation d-flex justify-content-around"
+                  novalidate
+                  action="/GoToURLAfterSignUp"
+                  method="POST"
+                  oninput='handlePasswordConfirmValidation(passwordInput,passwordConfirmationInput)'>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="col-12 modal-title text-center" id="modal-sign-up-title">Sign Up</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <hr/>
-                    <span class="hr">or</span>
-                    <hr/>
-                    <div class="form-floating mb-3">
-                        <label for="first-name-input">Enter your first name</label>
-                        <input type="text" class="form-control rounded-4" id="first-name-input"
-                               placeholder="First name" pattern="^[a-z,A-Z]{2,100}$" required>
-                        <div class="invalid-feedback">
-                            Please enter your first name <i class="fas fa-arrow-up"></i>
-                        </div>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <label for="last-name-input">Enter your last name</label>
-                        <input type="text" class="form-control rounded-4" id="last-name-input" placeholder="Last name"
-                               pattern="^[a-z,A-Z]{2,100}$" required>
-                        <div class="invalid-feedback">
-                            Please enter your last name <i class="fas fa-arrow-up"></i>
-                        </div>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <label for="email-input">Enter your email</label>
-                        <input type="email" class="form-control rounded-4" id="email-input"
-                               placeholder="Email address" required>
-                        <div class="invalid-feedback">
-                            Please enter your valid email <i class="fas fa-arrow-up"></i>
-                        </div>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <label for="date-input">Birthday</label>
-                        <input type="date" class="form-control rounded-4" id="date-input" required>
-                        <div class="invalid-feedback">
-                            Please choose date <i class="fas fa-arrow-up"></i>
-                        </div>
-                    </div>
-                    <div id="password" class="needs-validation password">
-                        <div class="form-floating password mb-3">
-                            <label for="password-input">Enter your password</label>
-                            <input type="password" class="form-control rounded-4" id="password-input"
-                                   name="passwordInput" placeholder="Password"
-                                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
-                            <button type="button" class="btn" name="password-input"
-                                    onclick="handleShowHidePassword(event)">
-                                <i id="password-input-icon" class="fa icon-eye-close fa-eye-slash"
-                                   title="Show your password"></i>
+                    <div class="modal-body d-flex justify-content-between">
+                        <div class="login-with d-flex justify-content-between">
+                            <button type="button" class="btn btn-light"><i class="fab fa-facebook-square fa-lg"></i>Log
+                                In with Facebook
                             </button>
-                            <div class="invalid-feedback">
-                                Password must be at least 8 characters long
-                                and contain one capital and lowercase letters, and one of the special characters:
-                                !@#$%^&*_=+-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="password-confirmation" class="needs-validation password">
-                        <div class="form-floating password mb-3">
-                            <label for="password-confirmation-input">Enter your password again</label>
-                            <input type="password" class="form-control rounded-4" id="password-confirmation-input"
-                                   name="passwordConfirmationInput" placeholder="Password confirmation"
-                                   required>
-                            <button type="button" class="btn" name="password-confirmation-input"
-                                    onclick="handleShowHidePassword(event)" about="password-confirmation-input">
-                                <i id="password-confirmation-input-icon" class="fa icon-eye-close fa-eye-slash"
-                                   title="Show your password"></i>
+                            <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google
                             </button>
+                        </div>
+                        <hr/>
+                        <span class="hr">or</span>
+                        <hr/>
+                        <div class="form-floating mb-3">
+                            <label for="first-name-input">Enter your first name</label>
+                            <input type="text" class="form-control rounded-4" id="first-name-input"
+                                   placeholder="First name" pattern="^[a-z,A-Z]{2,100}$" required>
                             <div class="invalid-feedback">
-                                Passwords do not match <i class="fas fa-arrow-up"></i>
+                                Please enter your first name <i class="fas fa-arrow-up"></i>
                             </div>
-                            <div class="valid-feedback">
-                                Great! Passwords matched
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="last-name-input">Enter your last name</label>
+                            <input type="text" class="form-control rounded-4" id="last-name-input"
+                                   placeholder="Last name"
+                                   pattern="^[a-z,A-Z]{2,100}$" required>
+                            <div class="invalid-feedback">
+                                Please enter your last name <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="email-input-sign-up">Enter your email</label>
+                            <input type="email" class="form-control rounded-4" id="email-input-sign-up"
+                                   placeholder="Email address" required>
+                            <div class="invalid-feedback">
+                                Please enter your valid email <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="date-input">Birthday</label>
+                            <input type="date" class="form-control rounded-4" id="date-input" required>
+                            <div class="invalid-feedback">
+                                Please choose date <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div id="password" class="needs-validation password">
+                            <div class="form-floating password mb-3">
+                                <label for="password-input-sign-up">Enter your password</label>
+                                <input type="password" class="form-control rounded-4" id="password-input-sign-up"
+                                       name="passwordInput" placeholder="Password"
+                                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
+                                <button type="button" class="btn" name="password-input-sign-up"
+                                        onclick="handleShowHidePassword(event)">
+                                    <i id="password-input-sign-up-icon" class="fa icon-eye-close fa-eye-slash"
+                                       title="Show your password"></i>
+                                </button>
+                                <div class="invalid-feedback">
+                                    Password must be at least 8 characters long
+                                    and contain one capital and lowercase letters, and one of the special characters:
+                                    !@#$%^&*_=+-
+                                </div>
+                            </div>
+                        </div>
+                        <div id="password-confirmation" class="needs-validation password">
+                            <div class="form-floating password mb-3">
+                                <label for="password-confirmation-input-sign-up">Enter your password again</label>
+                                <input type="password" class="form-control rounded-4"
+                                       id="password-confirmation-input-sign-up"
+                                       name="passwordConfirmationInput" placeholder="Password confirmation"
+                                       required>
+                                <button type="button" class="btn" name="password-confirmation-input-sign-up"
+                                        onclick="handleShowHidePassword(event)" about="password-confirmation-input">
+                                    <i id="password-confirmation-input-icon" class="fa icon-eye-close fa-eye-slash"
+                                       title="Show your password"></i>
+                                </button>
+                                <div class="invalid-feedback">
+                                    Passwords do not match <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <div class="valid-feedback">
+                                    Great! Passwords matched
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-terms-services">
+                            <label class="checkbox d-flex">I’d like to receive special offers
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark d-flex"></span>
+                            </label>
+                            <div class="terms-policy">
+                                <i class="fas fa-info-circle fa-lg"></i> By signing up, I agree to BuildNRate's <a
+                                    href="/">Terms
+                                of
+                                Service</a> and <a href="/">Privacy Policy</a>
                             </div>
                         </div>
                     </div>
-                    <div class="checkbox-terms-services">
-                        <label class="checkbox d-flex">I’d like to receive special offers
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark d-flex"></span>
-                        </label>
-                        <div class="terms-policy">
-                            <i class="fas fa-info-circle fa-lg"></i> By signing up, I agree to BuildNRate's <a
-                                href="/">Terms
-                            of
-                            Service</a> and <a href="/">Privacy Policy</a>
-                        </div>
+                    <div class="modal-footer text-center">
+                        <button id="submit-button-sign-up" class="btn btn-danger" type="submit"
+                                onclick="handleValidation(event, mainFormSignUp)">
+                            Sign up
+                        </button>
                     </div>
+                    <p class="text-center">Already have an account? <a href="/signIn">Sign in</a></p>
                 </div>
-                <div class="modal-footer text-center">
-                    <button id="submit-button" class="btn btn-danger" type="submit" onclick="handleValidation(event)">
-                        Sign up
-                    </button>
-                </div>
-                <p class="text-center">Already have an account? <a href="/">Sign in</a></p>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
 <!-- End of Sign Up Modal --------------------------------------------------------------------------------------------->
-<script src="/public/js/signUp.js"></script>
+
+
+<!-- Sign In Modal -->
+<div class="modal fade" id="modal-sign-in" tabindex="-1" role="dialog" aria-labelledby="modal-sign-in-title"
+     aria-hidden="true">
+    <div class="sign-in">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form id="main-form-sign-in" name="mainFormSignIn" class="needs-validation d-flex justify-content-around"
+                  novalidate
+                  action="/GoToURLAfterSignIn"
+                  method="POST">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="col-12 modal-title text-center" id="modal-sign-in-title">Sign In</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-between">
+                        <div class="login-with d-flex justify-content-between">
+                            <button type="button" class="btn btn-light"><i class="fab fa-facebook-square fa-lg"></i>Log
+                                In with Facebook
+                            </button>
+                            <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google
+                            </button>
+                        </div>
+                        <hr/>
+                        <span class="hr">or</span>
+                        <hr/>
+                        <div class="needs-validation password">
+                            <div class="form-floating password mb-3">
+                                <label for="email-input-sign-in">Enter your email</label>
+                                <input type="email" class="form-control rounded-4" id="email-input-sign-in"
+                                       placeholder="Email address" required>
+                                <button type="button" class="btn user">
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <div class="invalid-feedback">
+                                    Please enter your valid email <i class="fas fa-arrow-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="needs-validation password">
+                            <div class="form-floating password mb-3">
+                                <label for="password-input-sign-in">Enter your password</label>
+                                <input type="password" class="form-control rounded-4" id="password-input-sign-in"
+                                       name="passwordInput" placeholder="Password"
+                                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
+                                <button type="button" class="btn" name="password-input-sign-in"
+                                        onclick="handleShowHidePassword(event)">
+                                    <i id="password-input-sign-in-icon" class="fa icon-eye-close fa-eye-slash"
+                                       title="Show your password"></i>
+                                </button>
+                                <div class="invalid-feedback">
+                                    Password must be at least 8 characters long
+                                    and contain one capital and lowercase letters, and one of the special characters:
+                                    !@#$%^&*_=+-
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-terms-services d-flex justify-content-between">
+                            <label class="checkbox d-flex">Remember me
+                                <input type="checkbox">
+                                <span class="checkmark d-flex"></span>
+                            </label>
+                            <div class="terms-policy"><a style="font-size: 14px" href="/">Forgot password?</a></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button id="submit-button-sign-in" class="btn btn-danger" type="submit"
+                                onclick="handleValidation(event, mainFormSignIn)">
+                            Sign in
+                        </button>
+                    </div>
+                    <p class="text-center">Don't have an account? <a style="font-size: 14px" href="/signUp">Sign up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End of Sign In Modal -->
+<script src="/public/js/app.js"></script>
 </body>
 </html>

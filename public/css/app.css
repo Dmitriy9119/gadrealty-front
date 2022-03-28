@@ -24,158 +24,163 @@ body {
 }
 
 @media (min-width: 300px) {
-  .modal-content.sign-up-container {
+  .sign-up .modal-content {
     min-width: 80%;
   }
 }
 @media (min-width: 768px) {
-  .modal-content.sign-up-container {
+  .sign-up .modal-content {
     min-width: 140%;
   }
 }
 @media (min-width: 300px), (min-width: 768px) {
-  .modal-content.sign-up-container .modal-body .login-with {
+  .sign-up .modal-content .modal-header button {
+    position: absolute;
+    top: 2.5%;
+    right: 6%;
+  }
+  .sign-up .modal-content .modal-body .login-with {
     flex-flow: column;
     min-width: 100%;
   }
-  .modal-content.sign-up-container .modal-body .login-with button {
+  .sign-up .modal-content .modal-body .login-with button {
     min-width: 100%;
   }
-  .modal-content.sign-up-container .modal-body .needs-validation {
+  .sign-up .modal-content .modal-body .needs-validation {
     min-width: 100%;
   }
-  .modal-content.sign-up-container .modal-body .form-floating {
+  .sign-up .modal-content .modal-body .form-floating {
     min-width: 100%;
   }
-  .modal-content.sign-up-container .modal-body .form-floating label {
+  .sign-up .modal-content .modal-body .form-floating label {
     margin-bottom: 1%;
   }
-  .modal-content.sign-up-container .modal-body .form-floating .form-control .validate {
+  .sign-up .modal-content .modal-body .form-floating .form-control .validate {
     max-width: 100%;
   }
-  .modal-content.sign-up-container .modal-body .checkbox-terms-services {
+  .sign-up .modal-content .modal-body .checkbox-terms-services {
     max-width: 100%;
   }
 }
 @media (min-width: 992px) {
-  .modal-content.sign-up-container .modal-body .login-with {
+  .sign-up .modal-content .modal-header button {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+  }
+  .sign-up .modal-content .modal-body .login-with {
     flex-flow: row nowrap;
   }
-  .modal-content.sign-up-container .modal-body .login-with button {
+  .sign-up .modal-content .modal-body .login-with button {
     min-width: 45.5%;
   }
-  .modal-content.sign-up-container .modal-body .needs-validation.password {
+  .sign-up .modal-content .modal-body .needs-validation.password {
     max-width: 45.5%;
   }
-  .modal-content.sign-up-container .modal-body .needs-validation.passwordConfirmation {
+  .sign-up .modal-content .modal-body .needs-validation.passwordConfirmation {
     max-width: 45.5%;
   }
-  .modal-content.sign-up-container .modal-body .needs-validation {
+  .sign-up .modal-content .modal-body .needs-validation {
     min-width: 45.5%;
   }
-  .modal-content.sign-up-container .modal-body .form-floating {
+  .sign-up .modal-content .modal-body .form-floating {
     min-width: 45.5%;
   }
-  .modal-content.sign-up-container .modal-body .form-floating label {
+  .sign-up .modal-content .modal-body .form-floating label {
     margin-bottom: 1.5%;
   }
-  .modal-content.sign-up-container .modal-body .checkbox-terms-services {
+  .sign-up .modal-content .modal-body .checkbox-terms-services {
     max-width: 50%;
   }
 }
-.modal-content {
+.sign-up .modal-content {
   padding: 4.7% 7%;
   border-radius: 20px;
 }
-.modal-content p {
+.sign-up .modal-content p {
   font-size: 16px;
 }
-.modal-content p a {
+.sign-up .modal-content p a {
   font-size: 16px;
 }
-.modal-content a {
+.sign-up .modal-content a {
   color: #BE1827;
   text-decoration: none;
 }
-.modal-content a:hover {
+.sign-up .modal-content a:hover {
   text-decoration: underline;
 }
-.modal-content .modal-header {
+.sign-up .modal-content .modal-header {
   border-bottom: none;
 }
-.modal-content .modal-header span {
+.sign-up .modal-content .modal-header span {
   font-size: 36px;
   font-weight: bold;
 }
-.modal-content .modal-header button {
-  position: absolute;
-  top: 4%;
-  right: 4%;
-}
-.modal-content .modal-body {
+.sign-up .modal-content .modal-body {
   flex-flow: row wrap;
 }
-.modal-content .modal-body .login-with button {
+.sign-up .modal-content .modal-body .login-with button {
   margin-bottom: 2%;
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 16px;
   background: white;
 }
-.modal-content .modal-body .login-with button i {
+.sign-up .modal-content .modal-body .login-with button i {
   margin-right: 4%;
 }
-.modal-content .modal-body .hr {
+.sign-up .modal-content .modal-body .hr {
   font-size: 16px;
   color: #4E4E4E;
   margin: 1% auto;
 }
-.modal-content .modal-body hr {
+.sign-up .modal-content .modal-body hr {
   width: 45.5%;
 }
-.modal-content .modal-body .form-floating.password {
+.sign-up .modal-content .modal-body .form-floating.password {
   display: grid;
   grid-template-areas: "l l" "i b" "w w";
-  grid-template-columns: auto 15%;
+  grid-template-columns: auto 16%;
 }
-.modal-content .modal-body .form-floating.password label {
+.sign-up .modal-content .modal-body .form-floating.password label {
   grid-area: l;
 }
-.modal-content .modal-body .form-floating.password .form-control {
+.sign-up .modal-content .modal-body .form-floating.password .form-control {
   grid-area: i;
 }
-.modal-content .modal-body .form-floating.password .btn {
+.sign-up .modal-content .modal-body .form-floating.password .btn {
   margin-left: -2%;
   grid-area: b;
   border: 1px solid #ced4da;
   border-left: transparent;
 }
-.modal-content .modal-body .form-floating.password .btn:focus {
+.sign-up .modal-content .modal-body .form-floating.password .btn:focus {
   box-shadow: none;
 }
-.modal-content .modal-body .form-floating.password .invalid-feedback, .modal-content .modal-body .form-floating.password .valid-feedback {
+.sign-up .modal-content .modal-body .form-floating.password .invalid-feedback, .sign-up .modal-content .modal-body .form-floating.password .valid-feedback {
   grid-area: w;
 }
-.modal-content .modal-body .form-floating {
+.sign-up .modal-content .modal-body .form-floating {
   font-size: 14px;
   color: #7D7F87;
 }
-.modal-content .modal-body .form-floating .invalid-feedback, .modal-content .modal-body .form-floating .valid-feedback {
+.sign-up .modal-content .modal-body .form-floating .invalid-feedback, .sign-up .modal-content .modal-body .form-floating .valid-feedback {
   font-size: 13px;
 }
-.modal-content .modal-body .form-floating .form-control {
+.sign-up .modal-content .modal-body .form-floating .form-control {
   font-size: 16px;
 }
-.modal-content .modal-body .checkbox-terms-services .termsPolicy {
+.sign-up .modal-content .modal-body .checkbox-terms-services .termsPolicy {
   font-size: 14px;
   color: #4E4E4E;
 }
-.modal-content .modal-body .checkbox-terms-services .checkbox {
+.sign-up .modal-content .modal-body .checkbox-terms-services .checkbox {
   font-size: 14px;
   flex-flow: row-reverse;
   justify-content: left;
 }
-.modal-content .modal-body .checkbox-terms-services .checkbox .checkmark {
+.sign-up .modal-content .modal-body .checkbox-terms-services .checkbox .checkmark {
   margin-right: 6px;
   height: 17px;
   width: 17px;
@@ -184,7 +189,7 @@ body {
   border-radius: 2px;
   justify-content: center;
 }
-.modal-content .modal-body .checkbox-terms-services .checkbox .checkmark:after {
+.sign-up .modal-content .modal-body .checkbox-terms-services .checkbox .checkmark:after {
   content: "";
   display: block;
   margin-top: 1px;
@@ -196,24 +201,216 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.modal-content .modal-body .checkbox-terms-services .checkbox .checkmark:checked {
+.sign-up .modal-content .modal-body .checkbox-terms-services .checkbox .checkmark:checked {
   background-color: #BE1827;
 }
-.modal-content .modal-body .checkbox-terms-services .checkbox input {
+.sign-up .modal-content .modal-body .checkbox-terms-services .checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.modal-content .modal-body .checkbox-terms-services .checkbox input:checked ~ .checkmark {
+.sign-up .modal-content .modal-body .checkbox-terms-services .checkbox input:checked ~ .checkmark {
   background-color: #BE1827;
 }
-
-.modal-footer {
+.sign-up .modal-footer {
   border-top: none;
 }
-.modal-footer button {
+.sign-up .modal-footer button {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  min-height: 59px;
+  background: #BE1827;
+}
+
+@media (min-width: 300px) {
+  .sign-in .modal-content {
+    min-width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .sign-in .modal-content {
+    min-width: 140%;
+  }
+}
+@media (min-width: 300px), (min-width: 768px) {
+  .sign-in .modal-content .modal-header button {
+    position: absolute;
+    top: 3%;
+    right: 5%;
+  }
+  .sign-in .modal-content .modal-body .login-with {
+    flex-flow: column;
+    min-width: 100%;
+  }
+  .sign-in .modal-content .modal-body .login-with button {
+    min-width: 100%;
+  }
+  .sign-in .modal-content .modal-body .needs-validation {
+    min-width: 100%;
+  }
+  .sign-in .modal-content .modal-body .form-floating.password {
+    grid-template-columns: 16% auto;
+  }
+  .sign-in .modal-content .modal-body .form-floating {
+    min-width: 100%;
+  }
+  .sign-in .modal-content .modal-body .form-floating label {
+    margin-bottom: 1%;
+  }
+  .sign-in .modal-content .modal-body .form-floating .form-control .validate {
+    max-width: 100%;
+  }
+  .sign-in .modal-content .modal-body .checkbox-terms-services {
+    min-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .sign-in .modal-content .modal-header button {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+  }
+  .sign-in .modal-content .modal-body .login-with {
+    flex-flow: row nowrap;
+  }
+  .sign-in .modal-content .modal-body .login-with button {
+    min-width: 45.5%;
+  }
+  .sign-in .modal-content .modal-body .form-floating.password {
+    grid-template-columns: 8% auto;
+  }
+  .sign-in .modal-content .modal-body .checkbox-terms-services {
+    flex-flow: row nowrap;
+    min-width: 100%;
+  }
+}
+.sign-in .modal-content {
+  padding: 4.7% 7%;
+  border-radius: 20px;
+}
+.sign-in .modal-content p {
+  font-size: 16px;
+}
+.sign-in .modal-content p a {
+  font-size: 16px;
+}
+.sign-in .modal-content a {
+  color: #BE1827;
+  text-decoration: none;
+}
+.sign-in .modal-content a:hover {
+  text-decoration: underline;
+}
+.sign-in .modal-content .modal-header {
+  border-bottom: none;
+}
+.sign-in .modal-content .modal-header span {
+  font-size: 36px;
+  font-weight: bold;
+}
+.sign-in .modal-content .modal-body {
+  flex-flow: row wrap;
+}
+.sign-in .modal-content .modal-body .login-with button {
+  margin-bottom: 2%;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+}
+.sign-in .modal-content .modal-body .login-with button i {
+  margin-right: 4%;
+}
+.sign-in .modal-content .modal-body .hr {
+  font-size: 16px;
+  color: #4E4E4E;
+  margin: 1% auto;
+}
+.sign-in .modal-content .modal-body hr {
+  width: 45.5%;
+}
+.sign-in .modal-content .modal-body .form-floating.password {
+  display: grid;
+  grid-template-areas: "l l" "b i" "w w";
+}
+.sign-in .modal-content .modal-body .form-floating.password label {
+  grid-area: l;
+}
+.sign-in .modal-content .modal-body .form-floating.password .form-control {
+  grid-area: i;
+}
+.sign-in .modal-content .modal-body .form-floating.password .btn.user {
+  cursor: inherit;
+}
+.sign-in .modal-content .modal-body .form-floating.password .btn {
+  grid-area: b;
+  border: 1px solid #ced4da;
+}
+.sign-in .modal-content .modal-body .form-floating.password .btn:focus {
+  box-shadow: none;
+}
+.sign-in .modal-content .modal-body .form-floating.password .invalid-feedback, .sign-in .modal-content .modal-body .form-floating.password .valid-feedback {
+  grid-area: w;
+}
+.sign-in .modal-content .modal-body .form-floating {
+  font-size: 14px;
+  color: #7D7F87;
+}
+.sign-in .modal-content .modal-body .form-floating .invalid-feedback, .sign-in .modal-content .modal-body .form-floating .valid-feedback {
+  font-size: 13px;
+}
+.sign-in .modal-content .modal-body .form-floating .form-control {
+  font-size: 16px;
+}
+.sign-in .modal-content .modal-body .checkbox-terms-services .termsPolicy {
+  color: #4E4E4E;
+}
+.sign-in .modal-content .modal-body .checkbox-terms-services label {
+  font-size: 14px;
+  flex-flow: row-reverse;
+  justify-content: left;
+}
+.sign-in .modal-content .modal-body .checkbox-terms-services label .checkmark {
+  margin-right: 6px;
+  height: 17px;
+  width: 17px;
+  background: transparent;
+  border: 1px solid #ACACAC;
+  border-radius: 2px;
+  justify-content: center;
+}
+.sign-in .modal-content .modal-body .checkbox-terms-services label .checkmark:after {
+  content: "";
+  display: block;
+  margin-top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.sign-in .modal-content .modal-body .checkbox-terms-services label .checkmark:checked {
+  background-color: #BE1827;
+}
+.sign-in .modal-content .modal-body .checkbox-terms-services label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.sign-in .modal-content .modal-body .checkbox-terms-services label input:checked ~ .checkmark {
+  background-color: #BE1827;
+}
+.sign-in .modal-footer {
+  border-top: none;
+}
+.sign-in .modal-footer button {
   width: 100%;
   font-size: 16px;
   font-weight: bold;
