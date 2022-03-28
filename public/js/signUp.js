@@ -3,18 +3,6 @@
     'use strict';
     window.addEventListener('load', function () {
 
-        // Validation main form on submit button click
-        const forms = document.getElementsByClassName('needs-validation sign-up');
-        const validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        }, false);
-
         // Validation main form on Enter button press
         const sigUpModal = document.getElementsByClassName('modal fade sign-up show')
         document.addEventListener("keypress", function (event) {
@@ -53,4 +41,12 @@
             icon.title = "Show your password"
             icon.className = "fa icon-eye-close fa-eye-slash"
         }
+    }
+
+// // Validation main form on submit button click
+    function handleValidation (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const mainForm = document.getElementById('main-form');
+                    mainForm.checkValidity() ? mainForm.submit() : mainForm.classList.add('was-validated')
     }
