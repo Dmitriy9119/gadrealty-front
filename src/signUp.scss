@@ -87,12 +87,6 @@
           margin-bottom: 1.5%;
         }
 
-        .form-control {
-
-          .validate {
-            max-width: 45.5%;
-          }
-        }
       }
 
       .checkbox-terms-services {
@@ -126,13 +120,19 @@
   }
 
   .modal-header {
+    border-bottom: none;
 
     span {
       font-size: 36px;
       font-weight: bold;
     }
 
-    border-bottom: none;
+    button {
+      position: absolute;
+      top: 4%;
+      right: 4%;
+    }
+
   }
 
   .modal-body {

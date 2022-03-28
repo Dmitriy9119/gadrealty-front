@@ -1,80 +1,56 @@
-// Validation on input's value change...-----------------------------------------------
+// Validation -----------------------------------------------------------------------------
 (function () {
     'use strict';
     window.addEventListener('load', function () {
-        // Validation of each input
-        const forms = document.getElementsByClassName('needs-validation');
-        const inputValidation = Array.prototype.filter.call(forms, function (form) {
-            if (form.id !== "mainForm") {
-                const input = document.getElementById(`${form.id}Input`);
-                input.addEventListener('blur', function () {
-                    !input.value && input.id !== "passwordConfirmationInput" && input.classList.add('is-invalid')
-                }, false);
-                input.addEventListener('input', function () {
-                    form.classList.add('was-validated')
-                    if (input.id !== "passwordConfirmationInput") {
-                        if (form.checkValidity()) {
-                            input.classList.remove('is-invalid')
-                            form.classList.add('was-validated')
-                            form.checkValidity() && input.classList.add('is-valid')
-                        } else {
-                            input.classList.remove('is-valid')
-                            form.classList.add('was-validated')
-                            !form.checkValidity() && input.classList.add('is-invalid')
-                        }
-                    }
-                }, false);
+
+        // Validation main form on submit button click
+        const forms = document.getElementsByClassName('needs-validation sign-up');
+        const validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        }, false);
+
+        // Validation main form on Enter button press
+        const sigUpModal = document.getElementsByClassName('modal fade sign-up show')
+        document.addEventListener("keypress", function (event) {
+            if (sigUpModal.length) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    document.getElementById("submit-button").click();
+                }
             }
+        });
+
+        // onInput and onBlur of each input validation
+        const singleForms = document.getElementsByClassName('form-floating');
+        const inputValidation = Array.prototype.filter.call(singleForms, function (form) {
+            const input = form.querySelector('input');
+            input.addEventListener('blur', function () {
+                !input.value && input.id !== "password-confirmation-input" && input.classList.add('is-invalid')
+            }, false);
+            input.addEventListener('input', function () {
+                form.classList.add('was-validated')
+            }, false);
         });
     }, false);
 })();
 
-// Validation of all inputs after Sig Up button click----------------------------------
-function handleValidation(event) {
-    const check = [];
-    const forms = $('.needs-validation');
-    forms.toArray().map(form => {
-        if (form.id === "mainForm") {
-            check.push(true)
-        } else {
-            form.classList.add('was-validated')
-            form.checkValidity() && check.push(true)
-        }
-    })
-    if (check.length !== forms.length) {
-        event.preventDefault()
-        event.stopPropagation()
-    } else {
-        window.location.replace("/url");  // ------------------go to some URL, if all inputs are valid
-    }
-}
-
-// Validation of all inputs after Enter button press-------------------------------------------
-document.addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-        const modalVisible = document.getElementsByClassName('modal fade sign-up show')
-        if (modalVisible.length) {
-            event.preventDefault()
-            event.stopPropagation()
-            handleValidation(event)
-        }
-    }
-}, false);
-
-
 // show/hide password button------------------------------------------------------------------
-function handleShowHidePassword(event) {
-    const input = document.getElementById(event.currentTarget.name);
-    const icon = document.getElementById(`${event.currentTarget.name}Icon`)
-    if (input.type === "password") {
-        input.type = "text"
-        icon.className = "fa icon-eye-close fa-eye-slash"
-        icon.title = "Hide your password"
-    } else {
-        input.type = "password"
-        icon.title = "Show your password"
-        icon.className = "fa icon-eye-open fa-eye"
+    function handleShowHidePassword(event) {
+        const input = document.getElementById(event.currentTarget.name);
+        const icon = document.getElementById(`${event.currentTarget.name}-icon`)
+        if (input.type === "password") {
+            input.type = "text"
+            icon.className = "fa icon-eye-open fa-eye"
+            icon.title = "Hide your password"
+        } else {
+            input.type = "password"
+            icon.title = "Show your password"
+            icon.className = "fa icon-eye-close fa-eye-slash"
+        }
     }
-}
-
-
