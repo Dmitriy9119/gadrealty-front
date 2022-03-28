@@ -25,14 +25,14 @@
 </head>
 <body>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignUp">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sign-up">
     Sign Up
 </button>
 <!-- Sign Up Modal -->
-<div class="modal fade sign-up" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUpTitle"
+<div class="modal fade sign-up" id="modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="modals-sign-up-title"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <form id="main-form" class="needs-validation sign-up d-flex justify-content-around" novalidate action="/GoToURL"
+        <form id="main-form-sign-up" class="needs-validation sign-up d-flex justify-content-around" novalidate action="/GoToURL"
               method="POST"
               oninput='passwordConfirmationInput.setCustomValidity(passwordConfirmationInput.value !== passwordInput.value ? false : "")'>
             <div class="modal-content sign-up-container">
@@ -144,7 +144,7 @@
         </form>
     </div>
 </div>
-<!-- End of Sign Up Modal -->
+<!-- End of Sign Up Modal --------------------------------------------------------------------------------------------->
 <script src="/public/js/signUp.js"></script>
 </body>
 </html>

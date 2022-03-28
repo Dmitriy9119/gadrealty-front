@@ -22,6 +22,7 @@
                 !input.value && input.id !== "password-confirmation-input" && input.classList.add('is-invalid')
             }, false);
             input.addEventListener('input', function () {
+                input.classList.remove('is-valid', 'is-invalid')
                 form.classList.add('was-validated')
             }, false);
         });
@@ -47,6 +48,6 @@
     function handleValidation (event) {
                     event.preventDefault();
                     event.stopPropagation();
-                    const mainForm = document.getElementById('main-form');
+                    const mainForm = document.getElementById('main-form-sign-up');
                     mainForm.checkValidity() ? mainForm.submit() : mainForm.classList.add('was-validated')
     }

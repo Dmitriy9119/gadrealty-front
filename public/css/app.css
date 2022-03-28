@@ -83,99 +83,99 @@ body {
     max-width: 50%;
   }
 }
-.modal-content.sign-up-container {
+.modal-content {
   padding: 4.7% 7%;
   border-radius: 20px;
 }
-.modal-content.sign-up-container p {
+.modal-content p {
   font-size: 16px;
 }
-.modal-content.sign-up-container p a {
+.modal-content p a {
   font-size: 16px;
 }
-.modal-content.sign-up-container a {
+.modal-content a {
   color: #BE1827;
   text-decoration: none;
 }
-.modal-content.sign-up-container a:hover {
+.modal-content a:hover {
   text-decoration: underline;
 }
-.modal-content.sign-up-container .modal-header {
+.modal-content .modal-header {
   border-bottom: none;
 }
-.modal-content.sign-up-container .modal-header span {
+.modal-content .modal-header span {
   font-size: 36px;
   font-weight: bold;
 }
-.modal-content.sign-up-container .modal-header button {
+.modal-content .modal-header button {
   position: absolute;
   top: 4%;
   right: 4%;
 }
-.modal-content.sign-up-container .modal-body {
+.modal-content .modal-body {
   flex-flow: row wrap;
 }
-.modal-content.sign-up-container .modal-body .login-with button {
+.modal-content .modal-body .login-with button {
   margin-bottom: 2%;
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 16px;
   background: white;
 }
-.modal-content.sign-up-container .modal-body .login-with button i {
+.modal-content .modal-body .login-with button i {
   margin-right: 4%;
 }
-.modal-content.sign-up-container .modal-body .hr {
+.modal-content .modal-body .hr {
   font-size: 16px;
   color: #4E4E4E;
   margin: 1% auto;
 }
-.modal-content.sign-up-container .modal-body hr {
+.modal-content .modal-body hr {
   width: 45.5%;
 }
-.modal-content.sign-up-container .modal-body .form-floating.password {
+.modal-content .modal-body .form-floating.password {
   display: grid;
   grid-template-areas: "l l" "i b" "w w";
   grid-template-columns: auto 15%;
 }
-.modal-content.sign-up-container .modal-body .form-floating.password label {
+.modal-content .modal-body .form-floating.password label {
   grid-area: l;
 }
-.modal-content.sign-up-container .modal-body .form-floating.password .form-control {
+.modal-content .modal-body .form-floating.password .form-control {
   grid-area: i;
 }
-.modal-content.sign-up-container .modal-body .form-floating.password .btn {
+.modal-content .modal-body .form-floating.password .btn {
   margin-left: -2%;
   grid-area: b;
   border: 1px solid #ced4da;
   border-left: transparent;
 }
-.modal-content.sign-up-container .modal-body .form-floating.password .btn:focus {
+.modal-content .modal-body .form-floating.password .btn:focus {
   box-shadow: none;
 }
-.modal-content.sign-up-container .modal-body .form-floating.password .invalid-feedback, .modal-content.sign-up-container .modal-body .form-floating.password .valid-feedback {
+.modal-content .modal-body .form-floating.password .invalid-feedback, .modal-content .modal-body .form-floating.password .valid-feedback {
   grid-area: w;
 }
-.modal-content.sign-up-container .modal-body .form-floating {
+.modal-content .modal-body .form-floating {
   font-size: 14px;
   color: #7D7F87;
 }
-.modal-content.sign-up-container .modal-body .form-floating .invalid-feedback, .modal-content.sign-up-container .modal-body .form-floating .valid-feedback {
+.modal-content .modal-body .form-floating .invalid-feedback, .modal-content .modal-body .form-floating .valid-feedback {
   font-size: 13px;
 }
-.modal-content.sign-up-container .modal-body .form-floating .form-control {
+.modal-content .modal-body .form-floating .form-control {
   font-size: 16px;
 }
-.modal-content.sign-up-container .modal-body .checkbox-terms-services .termsPolicy {
+.modal-content .modal-body .checkbox-terms-services .termsPolicy {
   font-size: 14px;
   color: #4E4E4E;
 }
-.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox {
+.modal-content .modal-body .checkbox-terms-services .checkbox {
   font-size: 14px;
   flex-flow: row-reverse;
   justify-content: left;
 }
-.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox .checkmark {
+.modal-content .modal-body .checkbox-terms-services .checkbox .checkmark {
   margin-right: 6px;
   height: 17px;
   width: 17px;
@@ -184,7 +184,7 @@ body {
   border-radius: 2px;
   justify-content: center;
 }
-.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox .checkmark:after {
+.modal-content .modal-body .checkbox-terms-services .checkbox .checkmark:after {
   content: "";
   display: block;
   margin-top: 1px;
@@ -196,17 +196,17 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox .checkmark:checked {
+.modal-content .modal-body .checkbox-terms-services .checkbox .checkmark:checked {
   background-color: #BE1827;
 }
-.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox input {
+.modal-content .modal-body .checkbox-terms-services .checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.modal-content.sign-up-container .modal-body .checkbox-terms-services .checkbox input:checked ~ .checkmark {
+.modal-content .modal-body .checkbox-terms-services .checkbox input:checked ~ .checkmark {
   background-color: #BE1827;
 }
 
