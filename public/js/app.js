@@ -30,15 +30,15 @@
                             const passwdIcons = [...item.getElementsByClassName('input-group-append')]
                             passwdIcons.map(item => {
                                 event.target.value ? item.classList.remove('d-none') : item.classList.add('d-none')
-                                //styling show/hide password icon
-                                const icons = [...item.getElementsByTagName('i')].map(icon => {
-                                        if (input.id !== "password-confirmation-input") {
-                                            if (input.checkValidity()) {
-                                                icon.classList.replace('text-danger', 'text-success')
-                                            } else icon.classList.add('text-danger')
-                                        }
-                                    }
-                                )
+                                // //styling show/hide password icon
+                                // const icons = [...item.getElementsByTagName('i')].map(icon => {
+                                //         if (input.id !== "password-confirmation-input") {
+                                //             if (input.checkValidity()) {
+                                //                 icon.classList.replace('text-danger', 'text-success')
+                                //             } else icon.classList.add('text-danger')
+                                //         }
+                                //     }
+                                // )
                             })
                         }
                     })
@@ -55,15 +55,16 @@
 function handleShowHidePassword(event) {
     const input = document.getElementById(event.currentTarget.name);
     const icon = document.getElementById(`${event.currentTarget.name}-icon`)
-    const iconStyle = icon.classList[--icon.classList.length]
+    let iconStyle = icon.classList[--icon.classList.length]
+    iconStyle = iconStyle.includes('text') ? iconStyle : ""
     if (input.type === "password") {
         input.type = "text"
-        icon.className = iconStyle.includes('text') && `fa icon-eye-open fa-eye ${iconStyle}`
+        icon.className = `fa icon-eye-open fa-eye ${iconStyle}`
         icon.title = "Hide your password"
     } else {
         input.type = "password"
         icon.title = "Show your password"
-        icon.className = iconStyle.includes('text') && `fa icon-eye-close fa-eye-slash ${iconStyle}`
+        icon.className = `fa icon-eye-close fa-eye-slash ${iconStyle}`
     }
 }
 
