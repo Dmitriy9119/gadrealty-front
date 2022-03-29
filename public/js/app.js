@@ -30,15 +30,15 @@
                             const passwdIcons = [...item.getElementsByClassName('input-group-append')]
                             passwdIcons.map(item => {
                                 event.target.value ? item.classList.remove('d-none') : item.classList.add('d-none')
-                                // //styling show/hide password icon
-                                // const icons = [...item.getElementsByTagName('i')].map(icon => {
-                                //         if (input.id !== "password-confirmation-input") {
-                                //             if (input.checkValidity()) {
-                                //                 icon.classList.replace('text-danger', 'text-success')
-                                //             } else icon.classList.add('text-danger')
-                                //         }
-                                //     }
-                                // )
+                                //styling show/hide password icon
+                                const icons = [...item.getElementsByTagName('i')].map(icon => {
+                                        if (input.id !== "password-confirmation-input") {
+                                            if (input.checkValidity()) {
+                                                icon.classList.replace('text-danger', 'text-success')
+                                            } else icon.classList.add('text-danger')
+                                        }
+                                    }
+                                )
                             })
                         }
                     })
