@@ -48,6 +48,10 @@
         .form-floating {
           min-width: 100%;
 
+          .input-group-append {
+            right: 24%;
+          }
+
           label {
             margin-bottom: 1%;
           }
@@ -108,6 +112,10 @@
 
         .form-floating {
           min-width: 45.5%;
+
+          .input-group-append {
+            right: 24%;
+          }
 
           label {
             margin-bottom: 1.5%;
@@ -185,40 +193,23 @@
         width: 45.5%;
       }
 
-      .form-floating.password {
-        display: grid;
-        grid-template-areas: 'l l' 'i b' 'w w';
-        grid-template-columns: auto 16%;
-
-        label {
-          grid-area: l;
-        }
-
-        .form-control {
-          grid-area: i;
-        }
-
-        .btn {
-          margin-left: -2%;
-          grid-area: b;
-          border: 1px solid #ced4da;
-          border-left: transparent;
-
-          &:focus {
-            box-shadow: none;
-          }
-
-        }
-
-        .invalid-feedback, .valid-feedback {
-          grid-area: w;
-        }
-      }
-
-
       .form-floating {
         font-size: 14px;
         color: #7D7F87;
+
+        .input-group {
+
+          input {
+            z-index: 0;
+            border-radius: 5px;
+          }
+
+          .input-group-append {
+            position: absolute;
+            width: 0;
+            z-index: 1;
+          }
+        }
 
 
         .invalid-feedback, .valid-feedback {

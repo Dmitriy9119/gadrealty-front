@@ -48,10 +48,6 @@
           min-width: 100%;
         }
 
-        .form-floating.password {
-          grid-template-columns: 16% auto;
-        }
-
         .form-floating {
           min-width: 100%;
 
@@ -102,8 +98,12 @@
           }
         }
 
-        .form-floating.password {
-          grid-template-columns: 8% auto;
+        .form-floating {
+
+          .input-group-append {
+            right: 11.5%;
+          }
+
         }
 
         .checkbox-terms-services {
@@ -178,42 +178,26 @@
         width: 45.5%;
       }
 
-      .form-floating.password {
-        display: grid;
-        grid-template-areas: 'l l' 'b i' 'w w';
-
-        label {
-          grid-area: l;
-        }
-
-        .form-control {
-          grid-area: i;
-        }
-
-        .btn.user {
-          cursor: inherit;
-        }
-
-        .btn {
-          grid-area: b;
-          border: 1px solid #ced4da;
-
-
-          &:focus {
-            box-shadow: none;
-          }
-
-        }
-
-        .invalid-feedback, .valid-feedback {
-          grid-area: w;
-        }
-      }
-
-
       .form-floating {
         font-size: 14px;
         color: #7D7F87;
+
+
+        .input-group{
+
+          input {
+            z-index: 0;
+            border-radius: 5px;
+          }
+
+          .input-group-append {
+            position: absolute;
+            width: 0;
+            z-index: 1;
+          }
+        }
+
+
 
 
         .invalid-feedback, .valid-feedback {

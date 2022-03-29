@@ -52,6 +52,9 @@ body {
   .sign-up .modal-content .modal-body .form-floating {
     min-width: 100%;
   }
+  .sign-up .modal-content .modal-body .form-floating .input-group-append {
+    right: 24%;
+  }
   .sign-up .modal-content .modal-body .form-floating label {
     margin-bottom: 1%;
   }
@@ -85,6 +88,9 @@ body {
   }
   .sign-up .modal-content .modal-body .form-floating {
     min-width: 45.5%;
+  }
+  .sign-up .modal-content .modal-body .form-floating .input-group-append {
+    right: 24%;
   }
   .sign-up .modal-content .modal-body .form-floating label {
     margin-bottom: 1.5%;
@@ -138,32 +144,18 @@ body {
 .sign-up .modal-content .modal-body hr {
   width: 45.5%;
 }
-.sign-up .modal-content .modal-body .form-floating.password {
-  display: grid;
-  grid-template-areas: "l l" "i b" "w w";
-  grid-template-columns: auto 16%;
-}
-.sign-up .modal-content .modal-body .form-floating.password label {
-  grid-area: l;
-}
-.sign-up .modal-content .modal-body .form-floating.password .form-control {
-  grid-area: i;
-}
-.sign-up .modal-content .modal-body .form-floating.password .btn {
-  margin-left: -2%;
-  grid-area: b;
-  border: 1px solid #ced4da;
-  border-left: transparent;
-}
-.sign-up .modal-content .modal-body .form-floating.password .btn:focus {
-  box-shadow: none;
-}
-.sign-up .modal-content .modal-body .form-floating.password .invalid-feedback, .sign-up .modal-content .modal-body .form-floating.password .valid-feedback {
-  grid-area: w;
-}
 .sign-up .modal-content .modal-body .form-floating {
   font-size: 14px;
   color: #7D7F87;
+}
+.sign-up .modal-content .modal-body .form-floating .input-group input {
+  z-index: 0;
+  border-radius: 5px;
+}
+.sign-up .modal-content .modal-body .form-floating .input-group .input-group-append {
+  position: absolute;
+  width: 0;
+  z-index: 1;
 }
 .sign-up .modal-content .modal-body .form-floating .invalid-feedback, .sign-up .modal-content .modal-body .form-floating .valid-feedback {
   font-size: 13px;
@@ -251,9 +243,6 @@ body {
   .sign-in .modal-content .modal-body .needs-validation {
     min-width: 100%;
   }
-  .sign-in .modal-content .modal-body .form-floating.password {
-    grid-template-columns: 16% auto;
-  }
   .sign-in .modal-content .modal-body .form-floating {
     min-width: 100%;
   }
@@ -279,8 +268,8 @@ body {
   .sign-in .modal-content .modal-body .login-with button {
     min-width: 45.5%;
   }
-  .sign-in .modal-content .modal-body .form-floating.password {
-    grid-template-columns: 8% auto;
+  .sign-in .modal-content .modal-body .form-floating .input-group-append {
+    right: 11.5%;
   }
   .sign-in .modal-content .modal-body .checkbox-terms-services {
     flex-flow: row nowrap;
@@ -332,32 +321,18 @@ body {
 .sign-in .modal-content .modal-body hr {
   width: 45.5%;
 }
-.sign-in .modal-content .modal-body .form-floating.password {
-  display: grid;
-  grid-template-areas: "l l" "b i" "w w";
-}
-.sign-in .modal-content .modal-body .form-floating.password label {
-  grid-area: l;
-}
-.sign-in .modal-content .modal-body .form-floating.password .form-control {
-  grid-area: i;
-}
-.sign-in .modal-content .modal-body .form-floating.password .btn.user {
-  cursor: inherit;
-}
-.sign-in .modal-content .modal-body .form-floating.password .btn {
-  grid-area: b;
-  border: 1px solid #ced4da;
-}
-.sign-in .modal-content .modal-body .form-floating.password .btn:focus {
-  box-shadow: none;
-}
-.sign-in .modal-content .modal-body .form-floating.password .invalid-feedback, .sign-in .modal-content .modal-body .form-floating.password .valid-feedback {
-  grid-area: w;
-}
 .sign-in .modal-content .modal-body .form-floating {
   font-size: 14px;
   color: #7D7F87;
+}
+.sign-in .modal-content .modal-body .form-floating .input-group input {
+  z-index: 0;
+  border-radius: 5px;
+}
+.sign-in .modal-content .modal-body .form-floating .input-group .input-group-append {
+  position: absolute;
+  width: 0;
+  z-index: 1;
 }
 .sign-in .modal-content .modal-body .form-floating .invalid-feedback, .sign-in .modal-content .modal-body .form-floating .valid-feedback {
   font-size: 13px;

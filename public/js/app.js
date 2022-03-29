@@ -21,7 +21,33 @@
                     input.classList.add('is-invalid')
                 }
             }, false);
-            input.addEventListener('input', function () {
+
+            input.addEventListener('input', function (event) {
+                // handlePasswordConfirmValidation()
+                if (!input.value && input.id !== "password-confirmation-input") {
+                    input.classList.add('is-invalid')
+                }
+                //display show/hide password button
+                if (input.id.includes('password')) {
+                    event.composedPath().map(item => {
+                        if (item.id?.indexOf("passwd") === 0) {
+                            const passwdIcons = [...item.getElementsByClassName('input-group-append')]
+                            passwdIcons.map(item => {
+                                event.target.value ? item.classList.remove('d-none') : item.classList.add('d-none')
+                                //styling show/hide password button
+                                const icons = [...item.getElementsByTagName('i')].map(icon => {
+                                        if (input.id !== "password-confirmation-input") {
+                                            if (input.checkValidity()) {
+                                                icon.classList.replace('text-danger', 'text-success')
+                                            } else icon.classList.add('text-danger')
+                                        }
+                                    }
+                                )
+                            })
+                        }
+                    })
+                }
+                //validate inputs
                 input.classList.remove('is-valid', 'is-invalid')
                 form.classList.add('was-validated')
             }, false);
@@ -33,14 +59,15 @@
 function handleShowHidePassword(event) {
     const input = document.getElementById(event.currentTarget.name);
     const icon = document.getElementById(`${event.currentTarget.name}-icon`)
+    const iconStyle = icon.classList[--icon.classList.length]
     if (input.type === "password") {
         input.type = "text"
-        icon.className = "fa icon-eye-open fa-eye"
+        icon.className = iconStyle.includes('text') && `fa icon-eye-open fa-eye ${iconStyle}`
         icon.title = "Hide your password"
     } else {
         input.type = "password"
         icon.title = "Show your password"
-        icon.className = "fa icon-eye-close fa-eye-slash"
+        icon.className = iconStyle.includes('text') && `fa icon-eye-close fa-eye-slash ${iconStyle}`
     }
 }
 
@@ -54,5 +81,9 @@ function handleValidation(event, form) {
 
 // Validation of password confirm input
 function handlePasswordConfirmValidation(password, passwordConfirm) {
-    passwordConfirm.setCustomValidity(passwordConfirm.value !== password.value ? false : "")
+    passwordConfirm.setCustomValidity(passwordConfirm.value === password.value ? "" : "invalid")
+    //styling icon on validation
+    const icon = document.getElementById('password-confirmation-input-sign-up-icon')
+    passwordConfirm.value !== password.value ? icon.classList.add('text-danger') : icon.classList.replace('text-danger', 'text-success')
 }
+

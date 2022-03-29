@@ -92,40 +92,53 @@
                             </div>
                         </div>
                         <div id="password" class="needs-validation password">
-                            <div class="form-floating password mb-3">
+                            <div id='passwd-sign-up' class="form-floating mb-3">
                                 <label for="password-input-sign-up">Enter your password</label>
-                                <input type="password" class="form-control rounded-4" id="password-input-sign-up"
-                                       name="passwordInput" placeholder="Password"
-                                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
-                                <button type="button" class="btn" name="password-input-sign-up"
-                                        onclick="handleShowHidePassword(event)">
-                                    <i id="password-input-sign-up-icon" class="fa icon-eye-close fa-eye-slash"
-                                       title="Show your password"></i>
-                                </button>
-                                <div class="invalid-feedback">
-                                    Password must be at least 8 characters long
-                                    and contain one capital and lowercase letters, and one of the special characters:
-                                    !@#$%^&*_=+-
+                                <div class="input-group">
+                                    <input type="password" class="form-control rounded-4"
+                                           id="password-input-sign-up"
+                                           name="passwordInput" placeholder="Password"
+                                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
+                                           required>
+                                    <div class="input-group-append d-none">
+                                        <button type="button" class="shadow-none btn" name="password-input-sign-up"
+                                                onclick="handleShowHidePassword(event)">
+                                            <i id="password-input-sign-up-icon" class="fa icon-eye-close fa-eye-slash"
+                                               title="Show your password"></i>
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Password must be at least 8 characters long
+                                        and contain one capital and lowercase letters, and one of the special
+                                        characters:
+                                        !@#$%^&*_=+-
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div id="password-confirmation" class="needs-validation password">
-                            <div class="form-floating password mb-3">
+                            <div id="passwd-confirm-sign-up" class="form-floating password mb-3">
                                 <label for="password-confirmation-input-sign-up">Enter your password again</label>
-                                <input type="password" class="form-control rounded-4"
-                                       id="password-confirmation-input-sign-up"
-                                       name="passwordConfirmationInput" placeholder="Password confirmation"
-                                       required>
-                                <button type="button" class="btn" name="password-confirmation-input-sign-up"
-                                        onclick="handleShowHidePassword(event)" about="password-confirmation-input">
-                                    <i id="password-confirmation-input-icon" class="fa icon-eye-close fa-eye-slash"
-                                       title="Show your password"></i>
-                                </button>
-                                <div class="invalid-feedback">
-                                    Passwords do not match <i class="fas fa-arrow-up"></i>
-                                </div>
-                                <div class="valid-feedback">
-                                    Great! Passwords matched
+                                <div class="input-group">
+                                    <input type="password" class="form-control rounded-4"
+                                           id="password-confirmation-input-sign-up"
+                                           name="passwordConfirmationInput" placeholder="Password confirmation"
+                                           pattern="^(?=.*[a-z,A-Z])(?=.*[0-9]).{2,}$"
+                                           required>
+                                    <div class="input-group-append d-none">
+                                        <button type="button" class="shadow-none btn" name="password-confirmation-input-sign-up"
+                                                onclick="handleShowHidePassword(event)">
+                                            <i id="password-confirmation-input-sign-up-icon"
+                                               class="fa icon-eye-close fa-eye-slash"
+                                               title="Show your password"></i>
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Passwords do not match <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                    <div id="valid" class="valid-feedback">
+                                        Great! Passwords matched
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -184,33 +197,31 @@
                         <hr/>
                         <span class="hr">or</span>
                         <hr/>
-                        <div class="needs-validation password">
-                            <div class="form-floating password mb-3">
-                                <label for="email-input-sign-in">Enter your email</label>
-                                <input type="email" class="form-control rounded-4" id="email-input-sign-in"
-                                       placeholder="Email address" required>
-                                <button type="button" class="btn user">
-                                    <i class="fas fa-user"></i>
-                                </button>
-                                <div class="invalid-feedback">
-                                    Please enter your valid email <i class="fas fa-arrow-up"></i>
-                                </div>
+                        <div class="form-floating mb-3">
+                            <label for="email-input-sign-in">Enter your email</label>
+                            <input type="email" class="form-control rounded-4" id="email-input-sign-in"
+                                   placeholder="Email address" required>
+                            <div class="invalid-feedback">
+                                Please enter your valid email <i class="fas fa-arrow-up"></i>
                             </div>
                         </div>
-                        <div class="needs-validation password">
-                            <div class="form-floating password mb-3">
-                                <label for="password-input-sign-in">Enter your password</label>
+                        <div id='passwd-sign-in' class="form-floating mb-3">
+                            <label for="password-input-sign-in">Enter your password</label>
+                            <div class="input-group">
+                                <div class="input-group-append d-none">
+                                    <button type="button" class="shadow-none btn" name="password-input-sign-in"
+                                            onclick="handleShowHidePassword(event)">
+                                        <i id="password-input-sign-in-icon" class="fa icon-eye-close fa-eye-slash"
+                                           title="Show your password"></i>
+                                    </button>
+                                </div>
                                 <input type="password" class="form-control rounded-4" id="password-input-sign-in"
                                        name="passwordInput" placeholder="Password"
                                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
-                                <button type="button" class="btn" name="password-input-sign-in"
-                                        onclick="handleShowHidePassword(event)">
-                                    <i id="password-input-sign-in-icon" class="fa icon-eye-close fa-eye-slash"
-                                       title="Show your password"></i>
-                                </button>
                                 <div class="invalid-feedback">
                                     Password must be at least 8 characters long
-                                    and contain one capital and lowercase letters, and one of the special characters:
+                                    and contain one capital and lowercase letters, and one of the special
+                                    characters:
                                     !@#$%^&*_=+-
                                 </div>
                             </div>
