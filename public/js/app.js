@@ -23,10 +23,6 @@
             }, false);
 
             input.addEventListener('input', function (event) {
-                // handlePasswordConfirmValidation()
-                if (!input.value && input.id !== "password-confirmation-input") {
-                    input.classList.add('is-invalid')
-                }
                 //display show/hide password button
                 if (input.id.includes('password')) {
                     event.composedPath().map(item => {
@@ -34,7 +30,7 @@
                             const passwdIcons = [...item.getElementsByClassName('input-group-append')]
                             passwdIcons.map(item => {
                                 event.target.value ? item.classList.remove('d-none') : item.classList.add('d-none')
-                                //styling show/hide password button
+                                //styling show/hide password icon
                                 const icons = [...item.getElementsByTagName('i')].map(icon => {
                                         if (input.id !== "password-confirmation-input") {
                                             if (input.checkValidity()) {
