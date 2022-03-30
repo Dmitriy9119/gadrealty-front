@@ -425,7 +425,7 @@ body {
     margin-top: 1%;
   }
   .user-profile div.list-search .list-search {
-    max-width: none;
+    max-width: fit-content;
   }
 }
 @media (min-width: 992px) {
