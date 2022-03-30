@@ -21,16 +21,15 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"
             integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
 </head>
 <body>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sign-up">
-    Sign Up
-</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sign-in">
-    Sign In
-</button>
+<!--//////////////////////////////main page/////////////////////////////////////////////-->
+<div class="main-container d-flex">
+    <a href="" class="btn btn-primary" role="button" data-toggle="modal" data-target="#modal-sign-up">Sign-up form</a>
+    <a href="" class="btn btn-primary" role="button" data-toggle="modal" data-target="#modal-sign-in">Sign-in form</a>
+    <a href="profile.html" target="_blank" class="btn btn-primary" role="button">User Profile</a>
+</div>
+<!--//////////////////////////////////////////////////////////////////////////////////-->
 <!-- Sign Up Modal -->
 <div class="modal fade" id="modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="modals-sign-up-title"
      aria-hidden="true">
@@ -126,7 +125,8 @@
                                            pattern="^(?=.*[a-z,A-Z])(?=.*[0-9]).{2,}$"
                                            required>
                                     <div class="input-group-append d-none">
-                                        <button type="button" class="shadow-none btn" name="password-confirmation-input-sign-up"
+                                        <button type="button" class="shadow-none btn"
+                                                name="password-confirmation-input-sign-up"
                                                 onclick="handleShowHidePassword(event)">
                                             <i id="password-confirmation-input-sign-up-icon"
                                                class="fa icon-eye-close fa-eye-slash"
