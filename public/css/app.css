@@ -490,4 +490,40 @@ body {
   font-size: 18px;
 }
 
+.card-container .card-group .card {
+  min-height: 290px;
+  min-width: 255px;
+  max-width: 255px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+.card-container .card-group .card .card-img-overlay {
+  z-index: 0;
+  margin-top: -8%;
+  margin-left: -5.5%;
+}
+.card-container .card-group .card .card-img-overlay .btn {
+  border-radius: 7px;
+  width: 50px;
+  font-size: 10px;
+  opacity: 0.9;
+}
+.card-container .card-group .card .card-img-overlay .btn:focus {
+  box-shadow: none;
+}
+.card-container .card-group .card .card-body {
+  z-index: 1;
+}
+.card-container .card-group .card .card-body div.text-one {
+  font-size: 12px;
+}
+.card-container .card-group .card .card-body div.text-one span.card-text {
+  font-weight: bold;
+}
+.card-container .card-group .card .card-footer {
+  font-size: 10px;
+  background: white;
+}
+
 /*# sourceMappingURL=app.css.map */

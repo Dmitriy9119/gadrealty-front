@@ -25,10 +25,48 @@
 </head>
 <body>
 <div class="container">
+
     <div class="card-container">
+        <div class="card-group">
+            <div class="card mr-4">
+                <img src="https://media.rightmove.co.uk/dir/crop/10:9-16:9/217k/216233/121167056/216233_3260_IMG_00_0000_max_476x317.jpeg"
+                     class="card-img-top" alt="...">
+                <div class="card-img-overlay">
+                    <a href="#active" class="btn btn-success p-0">Active</a>
+                    <a href="#new" class="btn btn-primary p-0">New</a>
+                </div>
+                <div class="card-body p-2">
+                    <div class="d-flex justify-content-between mt-1 mb-n3">
+                        <div class="d-flex ml-0">
+                            <h5 class="card-title">
+                                $2,350
+                            </h5>
+                            <div class="ml-1 mr-1 text-muted">
+                                /
+                            </div>
+                            <span class="card-text text-muted">
+                                month
+                            </span>
+                        </div>
+                        <button type="button" class="shadow-none btn pt-0 pr-0"
+                                onclick="handleAddToFavorites(event)">
+                            <i id="card-add-to-favorite" class="far fa-heart fa-lg text-muted"
+                               title="Add to Favorites"></i>
+                        </button>
+                    </div>
+                    <div class="text-one d-flex m-0">
+                        <p><small class="font-weight-bold" >Single family residence</small></p>
+                        <span class="card-text ml-1 mr-1"><small>•</small></span>
+                        <span class="card-text"><small class="text-muted font-weight-bold">for rent</small></span>
+                    </div>
+                </div>
+                <div class="card-footer  pl-2 pt-1 pb-1 pr-2 ">
+                    <small class="text-muted">Listed by: Coldwell Banker American Homes</small>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script src="/public/js/app.js"></script>
+</div>
+<script src="/public/js/app.js"></script>
 </body>
 </html>
