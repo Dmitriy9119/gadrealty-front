@@ -17,7 +17,7 @@
         const inputValidation = Array.prototype.filter.call(singleForms, function (form) {
             const input = form.querySelector('input');
             input.addEventListener('blur', function () {
-                if (!input.value && input.id !== "password-confirmation-input") {
+                if (!input.value && input.id !== "password-confirmation-input-sign-up") {
                     input.classList.add('is-invalid')
                 }
             }, false);
@@ -32,7 +32,7 @@
                                 event.target.value ? item.classList.remove('d-none') : item.classList.add('d-none')
                                 //styling show/hide password icon
                                 const icons = [...item.getElementsByTagName('i')].map(icon => {
-                                        if (input.id !== "password-confirmation-input") {
+                                        if (input.id !== "password-confirmation-input-sign-up") {
                                             if (input.checkValidity()) {
                                                 icon.classList.replace('text-danger', 'text-success')
                                             } else icon.classList.add('text-danger')
@@ -80,6 +80,7 @@ const handleValidation = (event, form) => {
 const handlePasswordConfirmValidation = (password, passwordConfirm) => {
     passwordConfirm.setCustomValidity(passwordConfirm.value === password.value ? "" : "invalid")
     //styling icon on validation
+    console.log()
     const icon = document.getElementById('password-confirmation-input-sign-up-icon')
     passwordConfirm.value !== password.value ? icon.classList.add('text-danger') : icon.classList.replace('text-danger', 'text-success')
 }
