@@ -585,8 +585,7 @@ body {
 }
 
 [id=heart] {
-  position: absolute;
-  left: -100vw;
+  display: none;
 }
 
 [for=heart] {

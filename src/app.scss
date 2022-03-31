@@ -97,8 +97,7 @@ body {
 // --------------------------------------End of CheckBox Custom
 //==========favorite icon-checkboxed=======================================
 [id="heart"] {
-  position: absolute;
-  left: -100vw;
+  display: none;
 }
 
 [for="heart"] {
