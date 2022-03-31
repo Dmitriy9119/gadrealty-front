@@ -490,6 +490,12 @@ body {
   font-size: 18px;
 }
 
+@media (min-width: 300px), (min-width: 768px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+}
 .card-container .card-group .card {
   min-height: 290px;
   min-width: 255px;
@@ -511,6 +517,14 @@ body {
 }
 .card-container .card-group .card .card-img-overlay .btn:focus {
   box-shadow: none;
+}
+.card-container .card-group .card .card-img-overlay img {
+  max-width: 60px;
+  position: absolute;
+  right: 0.35%;
+  top: 45.4%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
 }
 .card-container .card-group .card .card-body {
   z-index: 1;

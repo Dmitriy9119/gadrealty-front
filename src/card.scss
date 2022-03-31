@@ -1,5 +1,10 @@
 // Medium devices (300px and up, 768px and up)
-//@media (min-width: 300px), (min-width: 768px) {}
+@media (min-width: 300px), (min-width: 768px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 // Large devices (desktops, 992px and up)
 //@media (min-width: 992px) {}
@@ -8,7 +13,6 @@
 .card-container {
   .card-group {
     .card {
-
       min-height: 290px;
       min-width: 255px;
       max-width: 255px;
@@ -28,6 +32,14 @@
           &:focus {
             box-shadow: none;
           }
+        }
+        img {
+          max-width: 60px;
+          position: absolute;
+          right: 0.35%;
+          top: 45.4%;
+          border-radius: 4px;
+          background: rgba(255, 255, 255, 0.6);
         }
       }
 

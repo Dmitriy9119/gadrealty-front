@@ -55,16 +55,16 @@
 const handleShowHidePassword = (event) => {
     const input = document.getElementById(event.currentTarget.name);
     const icon = document.getElementById(`${event.currentTarget.name}-icon`)
-    let iconStyle = icon.classList[--icon.classList.length]
-    iconStyle = iconStyle.includes('text') ? iconStyle : ""
+    let iconValidationStyle = icon.classList[--icon.classList.length]
+    iconValidationStyle = iconValidationStyle.includes('text') ? iconValidationStyle : ""
     if (input.type === "password") {
         input.type = "text"
-        icon.className = `fa icon-eye-open fa-eye ${iconStyle}`
+        icon.className = `fa icon-eye-open fa-eye ${iconValidationStyle}`
         icon.title = "Hide your password"
     } else {
         input.type = "password"
         icon.title = "Show your password"
-        icon.className = `fa icon-eye-close fa-eye-slash ${iconStyle}`
+        icon.className = `fa icon-eye-close fa-eye-slash ${iconValidationStyle}`
     }
 }
 
@@ -86,10 +86,10 @@ const handlePasswordConfirmValidation = (password, passwordConfirm) => {
 
 
 // Add to favorites in card
-const handleAddToFavorites = () => {
+const handleAddToFavorites = (event) => {
 // do something...
 // icon styling...
-    const icon = document.getElementById('card-add-to-favorite')
+    const icon = event.target
     if (icon.classList.contains("far")) {
         icon.className = "fa fa-heart fa-lg text-warning"
         icon.title = "Remove from Favorites"
