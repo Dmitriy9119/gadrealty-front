@@ -495,8 +495,11 @@ body {
 .card-container.ver-2 .card-group .card .card-body {
   z-index: 1;
 }
-.card-container.ver-2 .card-group .card .card-body span.title {
+.card-container.ver-2 .card-group .card .card-body .title {
   font-size: 23px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-container.ver-2 .card-group .card .card-body div.text-one {
   font-size: 12px;

@@ -71,8 +71,11 @@
       .card-body {
         z-index: 1;
 
-        span.title {
+        .title {
           font-size: 23px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         div.text-one {
