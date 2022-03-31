@@ -3,16 +3,32 @@
   .card-container {
     display: flex;
     justify-content: center;
+    .card-group {
+      display: flex;
+      flex-flow: column;
+      //overflow: hidden;
+    }
   }
 }
 
 // Large devices (desktops, 992px and up)
-//@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
 
+    .card-group {
+      display: flex;
+      flex-flow: row nowrap;
+      overflow: auto;
+    }
+  }
+}
 
 .card-container {
   .card-group {
     .card {
+      margin-bottom: 2%;
       min-height: 290px;
       min-width: 255px;
       max-width: 255px;

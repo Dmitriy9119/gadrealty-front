@@ -495,8 +495,24 @@ body {
     display: flex;
     justify-content: center;
   }
+  .card-container .card-group {
+    display: flex;
+    flex-flow: column;
+  }
+}
+@media (min-width: 992px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+  }
+  .card-container .card-group {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: auto;
+  }
 }
 .card-container .card-group .card {
+  margin-bottom: 2%;
   min-height: 290px;
   min-width: 255px;
   max-width: 255px;
