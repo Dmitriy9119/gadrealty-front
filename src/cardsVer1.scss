@@ -1,7 +1,7 @@
 // Medium devices (300px and up, 768px and up)
 @media (min-width: 300px), (min-width: 768px) {
 
-  .card-container {
+  .card-container.ver-1 {
     display: flex;
     justify-content: center;
 
@@ -15,7 +15,7 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 
-  .card-container {
+  .card-container.ver-1 {
     display: flex;
     justify-content: left;
 
@@ -27,7 +27,7 @@
   }
 }
 
-.card-container {
+.card-container.ver-1 {
 
   .card-group {
 

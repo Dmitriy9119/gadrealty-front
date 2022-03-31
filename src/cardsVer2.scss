@@ -1,0 +1,94 @@
+// Medium devices (300px and up, 768px and up)
+@media (min-width: 300px), (min-width: 768px) {
+
+  .card-container.ver-2 {
+    display: flex;
+    justify-content: center;
+
+    .card-group {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  .card-container.ver-2 {
+    display: flex;
+    justify-content: left;
+
+    .card-group {
+      display: flex;
+      flex-flow: row nowrap;
+      overflow: auto;
+    }
+  }
+}
+
+.card-container.ver-2 {
+
+  .card-group {
+
+    .card {
+      min-height: 290px;
+      min-width: 315px;
+      max-width: 315px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+
+      .card-img-overlay {
+        z-index: 0;
+
+        .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25px;
+          height: 25px;
+          background-color: white;
+          border-radius: 50%;
+
+          &:hover {
+            background: rgba(190, 24, 39, 0.7);
+
+            button {
+              color: white;
+            }
+          }
+        }
+
+        button {
+          span {
+            margin-left: -30%;
+            margin-bottom: -60%;
+          }
+        }
+      }
+
+      .card-body {
+        z-index: 1;
+
+        span.title {
+          font-size: 23px;
+        }
+
+        div.text-one {
+          font-size: 12px;
+
+          span.card-text {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .card-footer {
+        font-size: 17px;
+        background: white;
+      }
+    }
+  }
+
+}

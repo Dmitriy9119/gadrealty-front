@@ -85,7 +85,7 @@ const handlePasswordConfirmValidation = (password, passwordConfirm) => {
 }
 
 
-// Add to favorites in card
+// Add to favorites in card ver.1
 const handleAddToFavorites = (event) => {
 // do something...
 // icon styling...

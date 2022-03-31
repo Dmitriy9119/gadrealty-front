@@ -221,62 +221,6 @@
 
         }
       }
-
-      // -------------------------------CheckBox Custom
-      .checkbox-terms-services {
-
-        .termsPolicy {
-          font-size: 14px;
-          color: #4E4E4E;
-        }
-
-        .checkbox {
-          font-size: 14px;
-          flex-flow: row-reverse;
-          justify-content: left;
-
-          .checkmark {
-            margin-right: 6px;
-            height: 17px;
-            width: 17px;
-            background: transparent;
-            border: 1px solid #ACACAC;
-            border-radius: 2px;
-            justify-content: center;
-
-            &:after {
-              content: "";
-              display: block;
-              margin-top: 1px;
-              width: 5px;
-              height: 10px;
-              border: solid white;
-              border-width: 0 3px 3px 0;
-              -webkit-transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-              transform: rotate(45deg);
-            }
-
-            &:checked {
-              background-color: #BE1827;
-            }
-          }
-
-          input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-
-            &:checked ~ .checkmark {
-              background-color: #BE1827;
-            }
-          }
-        }
-      }
-
-      // --------------------------------------End of CheckBox Custom
     }
   }
 
