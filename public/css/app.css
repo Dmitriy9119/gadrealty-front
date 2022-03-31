@@ -489,8 +489,8 @@ body {
   color: white;
 }
 .card-container.ver-2 .card-group .card .card-img-overlay button span {
-  margin-left: -30%;
-  margin-bottom: -60%;
+  margin-left: -33%;
+  margin-bottom: -68%;
 }
 .card-container.ver-2 .card-group .card .card-body {
   z-index: 1;
@@ -582,6 +582,39 @@ body {
 }
 .checkbox-terms-services label input:checked ~ .checkmark {
   background-color: #BE1827;
+}
+
+[id=heart] {
+  position: absolute;
+  left: -100vw;
+}
+
+[for=heart] {
+  color: #aab8c2;
+  cursor: pointer;
+  font-size: 1.5em;
+  align-self: center;
+  transition: color 0.2s ease-in-out;
+}
+
+[for=heart]:hover {
+  color: grey;
+}
+
+[for=heart]::selection {
+  color: unset;
+  background: transparent;
+}
+
+[for=heart]::moz-selection {
+  color: unset;
+  background: transparent;
+}
+
+[id=heart]:checked + label {
+  color: #e2264d;
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
 }
 
 /*# sourceMappingURL=app.css.map */

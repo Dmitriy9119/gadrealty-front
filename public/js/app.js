@@ -86,15 +86,15 @@ const handlePasswordConfirmValidation = (password, passwordConfirm) => {
 
 
 // Add to favorites in card ver.1
-const handleAddToFavorites = (event) => {
+// const handleAddToFavorites = (event) => {
 // do something...
 // icon styling...
-    const icon = event.target
-    if (icon.classList.contains("far")) {
-        icon.className = "fa fa-heart fa-lg text-warning"
-        icon.title = "Remove from Favorites"
-    } else {
-        icon.className = "far fa-heart fa-lg text-muted"
-        icon.title = "Add to Favorites"
-    }
-}
+//     const icon = event.target
+//     if (icon.classList.contains("far")) {
+//         icon.className = "fa fa-heart fa-lg text-warning"
+//         icon.title = "Remove from Favorites"
+//     } else {
+//         icon.className = "far fa-heart fa-lg text-muted"
+//         icon.title = "Add to Favorites"
+//     }
+// }
