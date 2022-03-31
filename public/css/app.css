@@ -503,7 +503,7 @@ body {
 @media (min-width: 992px) {
   .card-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
   .card-container .card-group {
     display: flex;
@@ -517,7 +517,7 @@ body {
   max-width: 255px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: 8px;
 }
 .card-container .card-group .card .card-img-overlay {
   z-index: 0;
@@ -536,8 +536,8 @@ body {
 .card-container .card-group .card .card-img-overlay img {
   max-width: 60px;
   position: absolute;
+  bottom: 48.8%;
   right: 0.35%;
-  top: 45.4%;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.6);
 }
@@ -551,7 +551,7 @@ body {
   font-weight: bold;
 }
 .card-container .card-group .card .card-footer {
-  font-size: 10px;
+  font-size: 12px;
   background: white;
 }
 
