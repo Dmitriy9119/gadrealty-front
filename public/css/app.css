@@ -156,7 +156,7 @@
 }
 @media (min-width: 768px) {
   .sign-in .modal-content {
-    min-width: 140%;
+    min-width: 120%;
   }
 }
 @media (min-width: 300px), (min-width: 768px) {
@@ -177,6 +177,9 @@
   }
   .sign-in .modal-content .modal-body .form-floating {
     min-width: 100%;
+  }
+  .sign-in .modal-content .modal-body .form-floating .input-group-append {
+    right: 23%;
   }
   .sign-in .modal-content .modal-body .form-floating label {
     margin-bottom: 1%;
@@ -201,7 +204,7 @@
     min-width: 45.5%;
   }
   .sign-in .modal-content .modal-body .form-floating .input-group-append {
-    right: 11.5%;
+    right: 13.5%;
   }
   .sign-in .modal-content .modal-body .checkbox-terms-services {
     flex-flow: row nowrap;

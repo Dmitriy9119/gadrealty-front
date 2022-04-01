@@ -12,7 +12,7 @@
   .sign-in {
 
     .modal-content {
-      min-width: 140%;
+      min-width: 120%;
     }
   }
 }
@@ -50,6 +50,10 @@
 
         .form-floating {
           min-width: 100%;
+
+          .input-group-append {
+            right: 23%;
+          }
 
           label {
             margin-bottom: 1%;
@@ -101,7 +105,7 @@
         .form-floating {
 
           .input-group-append {
-            right: 11.5%;
+            right: 13.5%;
           }
 
         }
