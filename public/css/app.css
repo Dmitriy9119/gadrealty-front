@@ -516,18 +516,6 @@
   background: white;
 }
 
-.settings-container a {
-  min-width: 260px;
-  font-size: 18px;
-}
-.settings-container .black {
-  border: 1px solid black;
-}
-.settings-container .red {
-  color: #BE1827;
-  border: 1px solid #BE1827;
-}
-
 @media (min-width: 300px) {
   .change-password-container .modal-content {
     min-width: 80%;
@@ -539,6 +527,13 @@
   }
 }
 @media (min-width: 300px), (min-width: 768px) {
+  .settings-container div.buttons {
+    flex-flow: column;
+  }
+  .settings-container div.buttons a {
+    margin-bottom: 5%;
+  }
+
   .change-password-container .modal-content .modal-header button {
     position: absolute;
     top: 2.5%;
@@ -556,6 +551,13 @@
   }
 }
 @media (min-width: 992px) {
+  .settings-container div.buttons {
+    flex-flow: row;
+  }
+  .settings-container div.buttons a {
+    margin-bottom: unset;
+  }
+
   .change-password-container .modal-content .modal-body .form-floating {
     max-width: fit-content;
   }
@@ -564,6 +566,26 @@
     top: -1.6%;
   }
 }
+.settings-container a {
+  width: 210px;
+  font-size: 18px;
+}
+.settings-container .black {
+  border: 1px solid black;
+}
+.settings-container .red {
+  color: #BE1827;
+  border: 1px solid #BE1827;
+}
+.settings-container div.notification, .settings-container div.account {
+  max-width: fit-content;
+  background: #F8F8F8;
+  border-radius: 10px;
+}
+.settings-container a.btn.btn-danger {
+  background: #BE1827;
+}
+
 .change-password-container .modal-content {
   padding: 4.7% 7%;
   border-radius: 20px;

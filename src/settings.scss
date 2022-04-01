@@ -1,25 +1,3 @@
-.settings-container {
-  a {
-    min-width: 260px ;
-    font-size: 18px;
-  }
-
-  .black {
-    border: 1px solid black;
-  }
-
-  .red {
-    color: #BE1827;
-    border: 1px solid #BE1827;
-  }
-}
-
-
-
-
-
-
-
 @media (min-width: 300px) {
   .change-password-container {
     .modal-content {
@@ -38,6 +16,15 @@
 
 // Medium devices (300px and up, 768px and up)
 @media (min-width: 300px), (min-width: 768px) {
+  .settings-container {
+    div.buttons {
+      flex-flow: column;
+      a {
+        margin-bottom: 5%;
+      }
+    }
+  }
+
   .change-password-container {
 
     .modal-content {
@@ -78,6 +65,15 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 
+  .settings-container {
+    div.buttons {
+      flex-flow: row;
+      a {
+        margin-bottom: unset;
+      }
+    }
+  }
+
   .change-password-container {
 
     .modal-content {
@@ -98,6 +94,31 @@
 }
 
 //end of Large devices (desktops, 992px and up)
+
+.settings-container {
+  a {
+    width: 210px ;
+    font-size: 18px;
+  }
+
+  .black {
+    border: 1px solid black;
+  }
+
+  .red {
+    color: #BE1827;
+    border: 1px solid #BE1827;
+  }
+
+  div.notification, div.account {
+    max-width: fit-content;
+    background: #F8F8F8;
+    border-radius: 10px;
+  }
+  a.btn.btn-danger {
+    background: #BE1827;
+  }
+}
 
 .change-password-container {
 
