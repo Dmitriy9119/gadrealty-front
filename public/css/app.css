@@ -397,6 +397,11 @@ body {
     overflow: auto;
   }
 }
+.card-container.ver-1 .card-group .card.normal {
+  min-height: 265px;
+  min-width: 280px;
+  max-width: 280px;
+}
 .card-container.ver-1 .card-group .card {
   min-height: 290px;
   min-width: 255px;
@@ -430,8 +435,17 @@ body {
 .card-container.ver-1 .card-group .card .card-body {
   z-index: 1;
 }
+.card-container.ver-1 .card-group .card .card-body div.normal {
+  font-size: 18px;
+}
+.card-container.ver-1 .card-group .card .card-body div.title {
+  font-size: 22px;
+}
 .card-container.ver-1 .card-group .card .card-body div.text-one {
   font-size: 12px;
+}
+.card-container.ver-1 .card-group .card .card-body div.text-one span.normal {
+  font-size: 18px;
 }
 .card-container.ver-1 .card-group .card .card-body div.text-one span.card-text {
   font-weight: bold;

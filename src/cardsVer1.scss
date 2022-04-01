@@ -31,6 +31,12 @@
 
   .card-group {
 
+    .card.normal {
+      min-height: 265px;
+      min-width: 280px;
+      max-width: 280px;
+    }
+
     .card {
       min-height: 290px;
       min-width: 255px;
@@ -68,8 +74,20 @@
       .card-body {
         z-index: 1;
 
+        div.normal {
+          font-size: 18px;
+        }
+
+        div.title {
+          font-size: 22px;
+        }
+
         div.text-one {
           font-size: 12px;
+
+          span.normal {
+            font-size: 18px;
+          }
 
           span.card-text {
             font-weight: bold;
