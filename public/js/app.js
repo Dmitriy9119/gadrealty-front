@@ -81,8 +81,11 @@ const handlePasswordConfirmValidation = (password, passwordConfirm) => {
     passwordConfirm.setCustomValidity(passwordConfirm.value === password.value ? "" : "invalid")
     //styling icon on validation
     console.log()
-    const icon = document.getElementById('password-confirmation-input-sign-up-icon')
-    passwordConfirm.value !== password.value ? icon.classList.add('text-danger') : icon.classList.replace('text-danger', 'text-success')
+    const icons = [...document.getElementsByTagName('i')]
+    icons.map(icon => {
+        if (icon.id.includes("password-confirmation"))
+            passwordConfirm.value !== password.value ? icon.classList.add('text-danger') : icon.classList.replace('text-danger', 'text-success')
+    })
 }
 
 

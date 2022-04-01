@@ -1,0 +1,188 @@
+.settings-container {
+  a {
+    min-width: 260px ;
+    font-size: 18px;
+  }
+
+  .black {
+    border: 1px solid black;
+  }
+
+  .red {
+    color: #BE1827;
+    border: 1px solid #BE1827;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 300px) {
+  .change-password-container {
+    .modal-content {
+      min-width: 80%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .change-password-container {
+    .modal-content {
+      min-width: 130%;
+    }
+  }
+}
+
+// Medium devices (300px and up, 768px and up)
+@media (min-width: 300px), (min-width: 768px) {
+  .change-password-container {
+
+    .modal-content {
+
+      .modal-header {
+
+        button {
+          position: absolute;
+          top: 2.5%;
+          right: 4%;
+        }
+
+      }
+
+      .modal-body {
+
+        .form-floating {
+          min-width: 100%;
+
+          .input-group-append {
+            right: 19%;
+            top: -1.8%;
+          }
+
+          .form-control {
+
+
+            .validate {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  .change-password-container {
+
+    .modal-content {
+
+      .modal-body {
+
+         .form-floating {
+          max-width: fit-content;
+
+          .input-group-append {
+            right: 14%;
+            top: -1.6%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//end of Large devices (desktops, 992px and up)
+
+.change-password-container {
+
+  .modal-content {
+    padding: 4.7% 7%;
+    border-radius: 20px;
+
+    p {
+      font-size: 16px;
+    }
+
+    .modal-header {
+      border-bottom: none;
+
+      span {
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+    }
+
+    .modal-body {
+
+      .form-floating {
+        font-size: 14px;
+        color: #7D7F87;
+
+        .input-group {
+
+          input {
+            z-index: 0;
+            border-radius: 5px;
+          }
+
+          .input-group-append {
+            position: absolute;
+            width: 0;
+            z-index: 1;
+          }
+        }
+
+
+        .invalid-feedback, .valid-feedback {
+          font-size: 13px;
+        }
+
+        .form-control {
+          font-size: 16px;
+
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    border-top: none;
+
+    button {
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      min-height: 59px;
+      background: #BE1827;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
