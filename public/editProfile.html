@@ -26,8 +26,72 @@
 </head>
 <body>
 <div class="container">
-    <div class="edit-profile-container">
-        <h1>Edit Profile</h1>
+    <h1 class="font-weight-bold mb-4">Edit Profile</h1>
+    <div class="edit-profile-container d-flex">
+        <div class="profile-image mr-5 text-center">
+            <div class="user-profile-image text-center m-2">
+                <img class="br-10 mb-4" src="https://cdn-icons-png.flaticon.com/512/147/147140.png"
+                     alt="UserProfileImage">
+            </div>
+            <a href="" role="button" class="btn btn-danger mb-3">Change image</a>
+        </div>
+        <div class="main-information">
+            <h5 class="font-weight-bold ml-2 ">Main information</h5>
+            <form id="main-form-edit-profile" name="mainFormEditProfile" class="needs-validation d-flex"
+                  novalidate
+                  action="/DoSomethingAfterSaveSettings"
+                  method="POST">
+                <div class="content row p-4 justify-content-between">
+                    <div class="form-floating mb-3">
+                        <label class="mb-n1" for="first-name-input">First name</label>
+                        <input type="text" class="form-control rounded-4" id="first-name-input"
+                               pattern="^[a-z,A-Z]{2,100}$" value="Kathryn" required>
+                        <div class="invalid-feedback">
+                            Please enter your first name <i class="fas fa-arrow-up"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label class="mb-n1" for="last-name-input">Last name</label>
+                        <input type="text" class="form-control rounded-4" id="last-name-input"
+                               pattern="^[a-z,A-Z]{2,100}$" value="Murphy" required>
+                        <div class="invalid-feedback">
+                            Please enter your last name <i class="fas fa-arrow-up"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label class="mb-n1" for="email-input">Email</label>
+                        <input type="email" class="form-control rounded-4" id="email-input"
+                               value="kathryn.m@gmail.com" required>
+                        <div class="invalid-feedback">
+                            Please enter your valid email <i class="fas fa-arrow-up"></i>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label class="mb-n1" for="date-input-optional">Birthday (optional)</label>
+                        <input type="date" class="form-control no-validate rounded-4" id="date-input-optional"
+                               value="1990-03-13">
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label class="mb-n1" for="about-me-input">About me (optional)</label>
+                        <div class="optional">
+                            <div id="about-me-input" class="form-control optional rounded-4" contenteditable></div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <label class="mb-n1" for="occupation-input">Occupation (optional)</label>
+                        <div class="optional">
+                            <div id="occupation-input" class="form-control optional rounded-4" contenteditable></div>
+                        </div>
+                    </div>
+                    <div class="form-floating button">
+                        <button id="submit-button-edit-profile" class="btn btn-danger" type="submit"
+                                onclick="handleValidation(event, mainFormEditProfile)">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 

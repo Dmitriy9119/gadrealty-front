@@ -633,6 +633,114 @@
   background: #BE1827;
 }
 
+@media (min-width: 300px), (min-width: 768px) {
+  .edit-profile-container {
+    flex-flow: column;
+  }
+  .edit-profile-container .profile-image {
+    padding: 6.5%;
+    min-width: 100%;
+  }
+  .edit-profile-container .profile-image a {
+    min-width: 90.5%;
+  }
+  .edit-profile-container .main-information {
+    background: #F8F8F8;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 5%;
+    padding: 8%;
+  }
+  .edit-profile-container .main-information form .content .form-floating.button {
+    margin-top: 6%;
+    margin-bottom: -6%;
+  }
+  .edit-profile-container .main-information form .content .form-floating {
+    width: 100%;
+  }
+  .edit-profile-container .main-information form .content .form-floating button {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .edit-profile-container {
+    flex-flow: row;
+  }
+  .edit-profile-container .profile-image {
+    padding: 1% 1% 2%;
+    min-width: 20%;
+  }
+  .edit-profile-container .profile-image a {
+    min-width: 78%;
+  }
+  .edit-profile-container .main-information {
+    background: unset;
+    border-radius: unset;
+    width: 60%;
+    padding: 0;
+    margin-top: 0;
+  }
+  .edit-profile-container .main-information form .content .form-floating.button {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 100%;
+    margin-top: 1%;
+    margin-bottom: -1.5%;
+  }
+  .edit-profile-container .main-information form .content .form-floating.button button {
+    width: 25%;
+  }
+  .edit-profile-container .main-information form .content .form-floating {
+    width: 48%;
+  }
+  .edit-profile-container .main-information form .content .form-floating button {
+    width: 50%;
+  }
+}
+.edit-profile-container .profile-image {
+  background: #F8F8F8;
+  border-radius: 10px;
+  height: fit-content;
+}
+.edit-profile-container .profile-image img {
+  max-width: 150px;
+  border-radius: 50%;
+  border: 2px solid #BE1827;
+}
+.edit-profile-container .main-information form .content h5 {
+  width: 100%;
+}
+.edit-profile-container .main-information form .content p {
+  font-size: 16px;
+}
+.edit-profile-container .main-information form .content p a {
+  font-size: 16px;
+}
+.edit-profile-container .main-information form .content .form-floating {
+  font-size: 14px;
+  color: #7D7F87;
+}
+.edit-profile-container .main-information form .content .form-floating .form-control {
+  font-size: 16px;
+}
+.edit-profile-container .main-information form .content .form-floating .form-control.no-validate:valid {
+  border-color: #ced4da;
+  background-image: none;
+  padding-right: 0.75rem !important;
+}
+.edit-profile-container .main-information form .content .form-floating .form-control.no-validate:valid:focus {
+  box-shadow: none;
+}
+.edit-profile-container .main-information form .content .form-floating div.form-control.optional {
+  min-height: 86px;
+  font-size: 16px;
+  white-space: normal;
+  overflow-y: auto;
+}
+.edit-profile-container .main-information form .content .form-floating .invalid-feedback {
+  font-size: 13px;
+}
+
 * {
   margin: 0;
   padding: 0;

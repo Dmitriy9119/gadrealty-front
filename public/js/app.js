@@ -17,7 +17,7 @@
         const inputValidation = Array.prototype.filter.call(singleForms, function (form) {
             const input = form.querySelector('input');
             input.addEventListener('blur', function () {
-                if (!input.value && input.id !== "password-confirmation-input-sign-up") {
+                if (!input.value && input.required && input.id !== "password-confirmation-input-sign-up") {
                     input.classList.add('is-invalid')
                 }
             }, false);
@@ -44,8 +44,10 @@
                     })
                 }
                 //validate inputs
-                input.classList.remove('is-valid', 'is-invalid')
-                form.classList.add('was-validated')
+                if (input.required) {
+                    input.classList.remove('is-valid', 'is-invalid')
+                    form.classList.add('was-validated')
+                }
             }, false);
         });
     }, false);
