@@ -16,12 +16,12 @@
         const singleForms = document.getElementsByClassName('form-floating');
         const inputValidation = Array.prototype.filter.call(singleForms, function (form) {
             const input = form.querySelector('input');
+            if (input){
             input.addEventListener('blur', function () {
                 if (!input.value && input.required && input.id !== "password-confirmation-input-sign-up") {
                     input.classList.add('is-invalid')
                 }
             }, false);
-
             input.addEventListener('input', function (event) {
                 //display show/hide password button
                 if (input.id.includes('password')) {
@@ -49,6 +49,7 @@
                     form.classList.add('was-validated')
                 }
             }, false);
+            }
         });
     }, false);
 })();
