@@ -722,6 +722,7 @@
 }
 .edit-profile-container .main-information form .content .form-floating .form-control {
   font-size: 16px;
+  resize: unset;
 }
 .edit-profile-container .main-information form .content .form-floating .form-control.no-validate:valid {
   border-color: #ced4da;
