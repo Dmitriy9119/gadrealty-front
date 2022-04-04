@@ -1,4 +1,4 @@
-@import "signUp", "signIn", "profile", "cardsVer1" , "cardsVer2", "settings", "editProfile";
+@import "signUp", "signIn", "profile", "cardsVer1", "cardsVer2", "settings", "editProfile", "ourTeam";
 
 * {
   margin: 0;
@@ -11,8 +11,11 @@ body {
 }
 
 .main-container {
-  flex-flow: column;
-  width: 200px;
+
+  div {
+    flex-flow: column;
+    width: 200px;
+  }
 
   * {
     margin: 10px;
@@ -32,7 +35,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.fa-facebook-square {
+.fa-facebook-square.blue {
   color: #3b5998;
   background-image: linear-gradient(to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
   background-size: 55%;
@@ -127,4 +130,5 @@ body {
   will-change: font-size;
   animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
 }
+
 //end of Favorite icon-checkboxed
