@@ -40,27 +40,6 @@
 @media (min-width: 992px) {
   .our-team-container {
 
-    .item-revert {
-
-      //#border {
-      //  width: 20.64%;
-      //}
-      //
-      //#border:before {
-      //  width: 50%;
-      //}
-    }
-
-    .item.first {
-      //#border:before {
-      //  width: 35.5%;
-      //}
-    }
-
-    //#border:before {
-    //  width: 50%;
-    //}
-
 
     .item-revert.item {
       display: flex;
@@ -124,36 +103,10 @@
     .border:after {
       right: -10px;
       bottom: -10px;
-      background: gray;
+      background: black;
       border-radius: 0 0 4px 0;
     }
   }
-  //#border {
-  //  position: relative;
-  //  padding: 10px;
-  //}
-  //
-  //#border:before, #border > :first-child:before {
-  //  position: absolute;
-  //  content: ' ';
-  //  border-style: solid;
-  //}
-  //
-  //#border:before {
-  //  height: 50%;
-  //  border-color: #BE1827;
-  //  top: 0;
-  //  left: 0;
-  //  border-width: 10px 0 0 10px
-  //}
-  //
-  //#border > :first-child:before {
-  //  width: 50%;
-  //  height: 50%;
-  //  bottom: -2.3%;
-  //  right: -3%;
-  //  border-width: 0 10px 10px 0
-  //}
 
   .card {
     height: 470px;
