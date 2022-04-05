@@ -2,9 +2,9 @@
 @media (min-width: 300px), (min-width: 768px) {
   .our-team-container {
 
-    #border:before {
-      width: 50%;
-    }
+    //#border:before {
+    //  width: 50%;
+    //}
 
 
     .item {
@@ -42,24 +42,24 @@
 
     .item-revert {
 
-      #border {
-        width: 20.64%;
-      }
-
-      #border:before {
-        width: 50%;
-      }
+      //#border {
+      //  width: 20.64%;
+      //}
+      //
+      //#border:before {
+      //  width: 50%;
+      //}
     }
 
     .item.first {
-      #border:before {
-        width: 35.5%;
-      }
+      //#border:before {
+      //  width: 35.5%;
+      //}
     }
 
-    #border:before {
-      width: 50%;
-    }
+    //#border:before {
+    //  width: 50%;
+    //}
 
 
     .item-revert.item {
@@ -95,32 +95,65 @@
 
 .our-team-container {
 
-  #border {
-    position: relative;
-    padding: 10px;
-  }
+  .item {
+    .border {
+      background: lightgray;
+      height: 470px;
+      width: 350px;
+      position:relative;
+      margin: 10px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
 
-  #border:before, #border > :first-child:before {
-    position: absolute;
-    content: ' ';
-    border-style: solid;
-  }
+    .border:before, .border:after  {
+      content: "";
+      position: absolute;
+      width: calc(50% + 10px);
+      height: calc(50% + 10px);
+      z-index: -1;
+    }
 
-  #border:before {
-    height: 50%;
-    border-color: #BE1827;
-    top: 0;
-    left: 0;
-    border-width: 10px 0 0 10px
-  }
+    .border:before {
+      left: -10px;
+      top: -10px;
+      background: #BE1827;
+      border-radius: 4px 0 0 0;
+    }
 
-  #border > :first-child:before {
-    width: 50%;
-    height: 50%;
-    bottom: -2.3%;
-    right: -3%;
-    border-width: 0 10px 10px 0
+    .border:after {
+      right: -10px;
+      bottom: -10px;
+      background: gray;
+      border-radius: 0 0 4px 0;
+    }
   }
+  //#border {
+  //  position: relative;
+  //  padding: 10px;
+  //}
+  //
+  //#border:before, #border > :first-child:before {
+  //  position: absolute;
+  //  content: ' ';
+  //  border-style: solid;
+  //}
+  //
+  //#border:before {
+  //  height: 50%;
+  //  border-color: #BE1827;
+  //  top: 0;
+  //  left: 0;
+  //  border-width: 10px 0 0 10px
+  //}
+  //
+  //#border > :first-child:before {
+  //  width: 50%;
+  //  height: 50%;
+  //  bottom: -2.3%;
+  //  right: -3%;
+  //  border-width: 0 10px 10px 0
+  //}
 
   .card {
     height: 470px;
