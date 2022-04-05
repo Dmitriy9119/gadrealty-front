@@ -2,96 +2,265 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ToDo</title>
     <!-- Bootstrap CSS (Cloudflare CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
           integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
           crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+          integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
     <!-- jQuery (Cloudflare CDN) -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap Bundle JS (Cloudflare CDN) -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"
             integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Font-awesome CSS (Cloudflare CDN) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
-          integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignUp">
-    Sign Up
-</button>
+<!--//////////////////////////////main page/////////////////////////////////////////////-->
+<div class="main-container d-flex">
+    <div class="d-flex">
+        <a href="" class="btn btn-primary" role="button" data-toggle="modal" data-target="#modal-sign-up">Sign-up
+            form</a>
+        <a href="" class="btn btn-primary" role="button" data-toggle="modal" data-target="#modal-sign-in">Sign-in
+            form</a>
+        <a href="cardsVer1.html" target="_blank" class="btn btn-primary" role="button">Cards ver.1</a>
+        <a href="cardsVer2.html" target="_blank" class="btn btn-primary" role="button">Cards ver.2</a>
+        <a href="cardsVer3.html" target="_blank" class="btn btn-primary" role="button">Cards ver.3</a>
+    </div>
+    <div class="d-flex">
+        <a href="profile.html" target="_blank" class="btn btn-primary" role="button">User Profile page</a>
+        <a href="editProfile.html" target="_blank" class="btn btn-primary" role="button">Edit Profile page</a>
+        <a href="settings.html" target="_blank" class="btn btn-primary" role="button">Settings page</a>
+        <a href="ourTeam.html" target="_blank" class="btn btn-primary" role="button">Our Team page</a>
+    </div>
+</div>
+<!--//////////////////////////////////////////////////////////////////////////////////-->
 <!-- Sign Up Modal -->
-<div class="modal fade" id="modalSignUp" tabindex="-1" role="dialog" aria-labelledby="modalSignUpTitle"
+<div class="modal fade" id="modal-sign-up" tabindex="-1" role="dialog" aria-labelledby="modals-sign-up-title"
      aria-hidden="true">
-    <div class="modal-dialog modal-dialog-center" role="document">
-        <div class="modal-content signUpContainer">
-            <div class="modal-header">
-                <span class="col-12 modal-title text-center" id="exampleModalLongTitle">Sign Up</span>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body d-flex justify-content-between">
-                <div class="loginWith d-flex justify-content-between">
-                    <button type="button" class="btn btn-light"><i class="fab fa-facebook-square fa-lg"></i>Log In with Facebook</button>
-                    <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google</button>
-                </div>
-                <hr/>
-                <span class="hr">or</span>
-                <hr/>
-                <div class="form-floating mb-3">
-                    <label for="firstNameInput">Enter your first name</label>
-                    <input type="email" class="form-control rounded-4" id="firstNameInput" placeholder="First name">
-                </div>
-                <div class="form-floating mb-3">
-                    <label for="lastNameInput">Enter your last name</label>
-                    <input type="email" class="form-control rounded-4" id="lastNameInput" placeholder="Last name">
-                </div>
-                <div class="form-floating mb-3">
-                    <label for="emailInput">Enter your email</label>
-                    <input type="email" class="form-control rounded-4" id="emailInput" placeholder="Email address">
-                </div>
-                <div class="form-floating mb-3">
-                    <label for="birthdayInput">Birthday</label>
-                    <input type="date" class="form-control rounded-4" id="birthdayInput">
-                </div>
-                <div class="form-floating mb-3">
-                    <label for="passwordInput">Enter your password</label>
-                    <input type="password" class="form-control rounded-4" id="passwordInput"
-                           placeholder="Password">
-                </div>
-                <div class="form-floating mb-3">
-                    <label for="passwordConfirmationInput">Enter your password again</label>
-                    <input type="password" class="form-control rounded-4" id="passwordConfirmationInput"
-                           placeholder="Password confirmation">
-                </div>
-                <div class="checkboxTermsServices">
-                    <label class="checkbox d-flex">I’d like to receive special offers
-                        <input type="checkbox">
-                        <span class="checkmark d-flex"></span>
-                    </label>
-                    <div class="termsPolicy">
-                        <i class="fas fa-info-circle fa-lg"></i> By signing up, I agree to BuildNRate's <a href="/">Terms
-                        of
-                        Service</a> and <a href="/">Privacy Policy</a>
+    <div class="sign-up">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form id="main-form-sign-up" name="mainFormSignUp" class="needs-validation d-flex justify-content-around"
+                  novalidate
+                  action="/GoToURLAfterSignUp"
+                  method="POST"
+                  oninput='handlePasswordConfirmValidation(passwordInput,passwordConfirmationInput)'>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="col-12 modal-title text-center" id="modal-sign-up-title">Sign Up</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
+                    <div class="modal-body d-flex justify-content-between">
+                        <div class="login-with d-flex justify-content-between">
+                            <button type="button" class="btn btn-light"><i class="fab fa-facebook-square blue fa-lg"></i>Log
+                                In with Facebook
+                            </button>
+                            <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google
+                            </button>
+                        </div>
+                        <hr/>
+                        <span class="hr">or</span>
+                        <hr/>
+                        <div class="form-floating mb-3">
+                            <label for="first-name-input">Enter your first name</label>
+                            <input type="text" class="form-control rounded-4" id="first-name-input"
+                                   placeholder="First name" pattern="^[a-z,A-Z]{2,100}$" required>
+                            <div class="invalid-feedback">
+                                Please enter your first name <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="last-name-input">Enter your last name</label>
+                            <input type="text" class="form-control rounded-4" id="last-name-input"
+                                   placeholder="Last name"
+                                   pattern="^[a-z,A-Z]{2,100}$" required>
+                            <div class="invalid-feedback">
+                                Please enter your last name <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="email-input-sign-up">Enter your email</label>
+                            <input type="email" class="form-control rounded-4" id="email-input-sign-up"
+                                   placeholder="Email address" required>
+                            <div class="invalid-feedback">
+                                Please enter your valid email <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <label for="date-input">Birthday</label>
+                            <input type="date" class="form-control rounded-4" id="date-input" required>
+                            <div class="invalid-feedback">
+                                Please choose date <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div id="password" class="needs-validation password">
+                            <div id='passwd-sign-up' class="form-floating mb-3">
+                                <label for="password-input-sign-up">Enter your password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control rounded-4"
+                                           id="password-input-sign-up"
+                                           name="passwordInput" placeholder="Password"
+                                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
+                                           required>
+                                    <div class="input-group-append d-none">
+                                        <button type="button" class="shadow-none btn" name="password-input-sign-up"
+                                                onclick="handleShowHidePassword(event)">
+                                            <i id="password-input-sign-up-icon" class="fa icon-eye-close fa-eye-slash"
+                                               title="Show your password"></i>
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Password must be at least 8 characters long
+                                        and contain one capital and lowercase letters, and one of the special
+                                        characters:
+                                        !@#$%^&*_=+-
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="password-confirmation" class="needs-validation password">
+                            <div id="passwd-confirm-sign-up" class="form-floating password mb-3">
+                                <label for="password-confirmation-input-sign-up">Enter your password again</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control rounded-4"
+                                           id="password-confirmation-input-sign-up"
+                                           name="passwordConfirmationInput" placeholder="Password confirmation"
+                                           pattern="^.{1,}$"
+                                           required>
+                                    <div class="input-group-append d-none">
+                                        <button type="button" class="shadow-none btn"
+                                                name="password-confirmation-input-sign-up"
+                                                onclick="handleShowHidePassword(event)">
+                                            <i id="password-confirmation-input-sign-up-icon"
+                                               class="fa icon-eye-close fa-eye-slash"
+                                               title="Show your password"></i>
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Passwords do not match <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                    <div id="valid" class="valid-feedback">
+                                        Great! Passwords matched
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-terms-services mb-1">
+                            <label class="checkbox d-flex">I’d like to receive special offers
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark d-flex"></span>
+                            </label>
+                            <div class="terms-policy">
+                                <i class="fas fa-info-circle fa-lg"></i> By signing up, I agree to BuildNRate's <a
+                                    href="/">Terms
+                                of
+                                Service</a> and <a href="/">Privacy Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button id="submit-button-sign-up" class="btn btn-danger" type="submit"
+                                onclick="handleValidation(event, mainFormSignUp)">
+                            Sign up
+                        </button>
+                    </div>
+                    <p class="text-center">Already have an account? <a href="/signIn">Sign in</a></p>
                 </div>
-            </div>
-            <div class="modal-footer text-center">
-                <button type="button" class="btn btn-danger">Sign up</button>
-            </div>
-            <p class="text-center">Already have an account? <a href="/">Sign in</a></p>
+            </form>
         </div>
     </div>
 </div>
-<!-- End of Sign Up Modal -->
+<!-- End of Sign Up Modal --------------------------------------------------------------------------------------------->
+
+
+<!-- Sign In Modal -->
+<div class="modal fade" id="modal-sign-in" tabindex="-1" role="dialog" aria-labelledby="modal-sign-in-title"
+     aria-hidden="true">
+    <div class="sign-in">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <form id="main-form-sign-in" name="mainFormSignIn" class="needs-validation d-flex justify-content-around"
+                  novalidate
+                  action="/GoToURLAfterSignIn"
+                  method="POST">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="col-12 modal-title text-center" id="modal-sign-in-title">Sign In</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-between">
+                        <div class="login-with d-flex justify-content-between">
+                            <button type="button" class="btn btn-light"><i class="fab fa-facebook-square fa-lg"></i>Log
+                                In with Facebook
+                            </button>
+                            <button type="button" class="btn btn-light"><i class="fab fa-google"></i>Log In with Google
+                            </button>
+                        </div>
+                        <hr/>
+                        <span class="hr">or</span>
+                        <hr/>
+                        <div class="form-floating mb-3">
+                            <label for="email-input-sign-in">Enter your email</label>
+                            <input type="email" class="form-control rounded-4" id="email-input-sign-in"
+                                   placeholder="Email address" required>
+                            <div class="invalid-feedback">
+                                Please enter your valid email <i class="fas fa-arrow-up"></i>
+                            </div>
+                        </div>
+                        <div id='passwd-sign-in' class="form-floating mb-3">
+                            <label for="password-input-sign-in">Enter your password</label>
+                            <div class="input-group">
+                                <div class="input-group-append d-none">
+                                    <button type="button" class="shadow-none btn" name="password-input-sign-in"
+                                            onclick="handleShowHidePassword(event)">
+                                        <i id="password-input-sign-in-icon" class="fa icon-eye-close fa-eye-slash"
+                                           title="Show your password"></i>
+                                    </button>
+                                </div>
+                                <input type="password" class="form-control rounded-4" id="password-input-sign-in"
+                                       name="passwordInput" placeholder="Password"
+                                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$" required>
+                                <div class="invalid-feedback">
+                                    Password must be at least 8 characters long
+                                    and contain one capital and lowercase letters, and one of the special
+                                    characters:
+                                    !@#$%^&*_=+-
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox-terms-services d-flex justify-content-between">
+                            <label class="checkbox d-flex">Remember me
+                                <input type="checkbox">
+                                <span class="checkmark d-flex"></span>
+                            </label>
+                            <div class="terms-policy"><a style="font-size:14px" href="/">Forgot password?</a></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button id="submit-button-sign-in" class="btn btn-danger" type="submit"
+                                onclick="handleValidation(event, mainFormSignIn)">
+                            Sign in
+                        </button>
+                    </div>
+                    <p class="text-center">Don't have an account? <a style="font-size: 14px" href="/signUp">Sign up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End of Sign In Modal -->
+<script src="/public/js/app.js"></script>
 </body>
 </html>

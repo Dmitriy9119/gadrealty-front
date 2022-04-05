@@ -1,0 +1,164 @@
+// Medium devices (300px and up, 768px and up)
+@media (min-width: 300px), (min-width: 768px) {
+
+  .edit-profile-container {
+    flex-flow: column;
+
+    .profile-image {
+      padding: 6.5%;
+      min-width: 100%;
+
+      a {
+        min-width: 90.5%;
+      }
+    }
+
+    .main-information {
+      background: #F8F8F8;
+      border-radius: 10px;
+      width: 100%;
+      margin-top: 5%;
+      padding: 8%;
+
+      form {
+
+        .content {
+
+          .form-floating.button {
+            margin-top: 6%;
+            margin-bottom: -6%;
+          }
+
+          .form-floating {
+            width: 100%;
+
+            button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+  .edit-profile-container {
+    flex-flow: row;
+
+    .profile-image {
+      padding: 1% 1% 2%;
+      min-width: 20%;
+
+      a {
+        min-width: 78%;
+      }
+    }
+
+    .main-information {
+      background: unset;
+      border-radius: unset;
+      width: 60%;
+      padding: 0;
+      margin-top: 0;
+
+      form {
+
+        .content {
+
+          .form-floating.button {
+            display: flex;
+            justify-content: flex-end;
+            min-width: 100%;
+            margin-top: 1%;
+            margin-bottom: -1.5%;
+
+            button {
+              width: 25%;
+            }
+          }
+
+          .form-floating {
+            width: 48%;
+
+            button {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//end of Large devices (desktops, 992px and up)
+
+.edit-profile-container {
+
+  .profile-image {
+    background: #F8F8F8;
+    border-radius: 10px;
+    height: fit-content;
+
+    img {
+      max-width: 150px;
+      border-radius: 50%;
+      border: 2px solid #BE1827;
+
+    }
+  }
+
+  .main-information {
+
+    form {
+
+      .content {
+
+        h5 {
+          width: 100%;
+        }
+
+        p {
+          font-size: 16px;
+
+          a {
+            font-size: 16px;
+          }
+        }
+
+        .form-floating {
+          font-size: 14px;
+          color: #7D7F87;
+
+          .form-control {
+            font-size: 16px;
+            resize: unset;
+          }
+
+          .form-control.no-validate:valid {
+            border-color: #ced4da;
+            background-image: none;
+            padding-right: .75rem !important;
+
+            &:focus {
+              box-shadow: none;
+            }
+          }
+
+          div.form-control.optional {
+            min-height: 86px;
+            font-size: 16px;
+            white-space: normal;
+            overflow-y: auto;
+          }
+
+          .invalid-feedback {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

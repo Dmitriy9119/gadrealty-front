@@ -1,5 +1,6 @@
 @media (min-width: 300px) {
-  .sign-up {
+  .sign-in {
+
     .modal-content {
       min-width: 80%;
     }
@@ -7,16 +8,19 @@
 }
 
 @media (min-width: 768px) {
-  .sign-up {
+
+  .sign-in {
+
     .modal-content {
-      min-width: 140%;
+      min-width: 120%;
     }
   }
 }
 
 // Medium devices (300px and up, 768px and up)
 @media (min-width: 300px), (min-width: 768px) {
-  .sign-up {
+
+  .sign-in {
 
     .modal-content {
 
@@ -24,10 +28,9 @@
 
         button {
           position: absolute;
-          top: 2.5%;
-          right: 6%;
+          top: 3%;
+          right: 5%;
         }
-
       }
 
       .modal-body {
@@ -49,7 +52,7 @@
           min-width: 100%;
 
           .input-group-append {
-            right: 24%;
+            right: 23%;
           }
 
           label {
@@ -66,7 +69,7 @@
         }
 
         .checkbox-terms-services {
-          max-width: 100%;
+          min-width: 100%;
         }
       }
     }
@@ -76,11 +79,12 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 
-  .sign-up {
+  .sign-in {
 
     .modal-content {
 
       .modal-header {
+
         button {
           position: absolute;
           top: 4%;
@@ -98,33 +102,17 @@
           }
         }
 
-        .needs-validation.password {
-          max-width: 45.5%;
-        }
-
-        .needs-validation.passwordConfirmation {
-          max-width: 45.5%;
-        }
-
-        .needs-validation {
-          min-width: 45.5%;
-        }
-
         .form-floating {
-          min-width: 45.5%;
 
           .input-group-append {
-            right: 24%;
-          }
-
-          label {
-            margin-bottom: 1.5%;
+            right: 13.5%;
           }
 
         }
 
         .checkbox-terms-services {
-          font-size: 14px;
+          flex-flow: row nowrap;
+          min-width: 100%;
         }
       }
     }
@@ -132,7 +120,8 @@
 }
 
 //end of Large devices (desktops, 992px and up)
-.sign-up {
+
+.sign-in {
 
   .modal-content {
     padding: 4.7% 7%;
@@ -197,7 +186,8 @@
         font-size: 14px;
         color: #7D7F87;
 
-        .input-group {
+
+        .input-group{
 
           input {
             z-index: 0;
@@ -210,6 +200,8 @@
             z-index: 1;
           }
         }
+
+
 
 
         .invalid-feedback, .valid-feedback {
@@ -236,5 +228,4 @@
     }
   }
 }
-
 

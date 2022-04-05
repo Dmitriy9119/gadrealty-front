@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo</title>
+    <!-- Bootstrap CSS (Cloudflare CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
+          integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+          integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <!-- jQuery (Cloudflare CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap Bundle JS (Cloudflare CDN) -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"
+            integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="settings-container">
+        <h1 class="font-weight-bold">Settings</h1>
+        <div class="notification p-4 mt-5 mb-5">
+            <h5 class="font-weight-bold">Notification settings</h5>
+            <div class="checkbox-terms-services mb-4 mt-4">
+                <label class="checkbox d-flex text-muted font-weight-bold">Join our mailing list
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark d-flex"></span>
+                </label>
+            </div>
+            <a href="" class="btn btn-danger" role="button">Save settings</a>
+        </div>
+        <div class="account p-4 mt-5 mb-5">
+            <h5 class="font-weight-bold">Account settings</h5>
+            <div class="buttons mt-4 mb-4 d-flex">
+                <a href="" class="black btn btn-light mr-4" role="button" data-toggle="modal"
+                   data-target="#modal-change-password">Change Password</a>
+                <a href="" class="red btn btn-light" role="button" data-toggle="modal"
+                   data-target="#modal-delete-account">Delete Account</a>
+            </div>
+        </div>
+
+
+        <!-- Change Password Modal -->
+        <div class="modal fade" id="modal-change-password" tabindex="-1" role="dialog"
+             aria-labelledby="modals-change-password-title"
+             aria-hidden="true">
+            <div class="change-password-container">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <form id="main-form-sign-up" name="mainFormChangePassword"
+                          class="needs-validation d-flex justify-content-around"
+                          novalidate
+                          action="/DoSomethingAfterChangePassword"
+                          method="POST"
+                          oninput='handlePasswordConfirmValidation(newPasswordInput,newPasswordConfirmationInput)'>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="col-12 modal-title text-center"
+                                      id="modal-sign-up-title">Change password</span>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body d-flex-column justify-content-between">
+
+                                <div id='passwd-current' class="form-floating mb-3">
+                                    <label for="current-password-input">Current password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control rounded-4 mt-n2"
+                                               id="current-password-input"
+                                               name="passwordInput"
+                                               pattern="^.{8,}$"
+                                               required>
+                                        <div class="input-group-append d-none">
+                                            <button type="button" class="shadow-none btn p-0"
+                                                    name="current-password-input"
+                                                    onclick="handleShowHidePassword(event)">
+                                                <i id="current-password-input-icon"
+                                                   class="fa icon-eye-close fa-eye-slash"
+                                                   title="Show your password"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter your current password <i class="fas fa-arrow-up"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id='passwd-new' class="form-floating mb-3">
+                                    <label for="new-password-input">New password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control rounded-4 mt-n2"
+                                               id="new-password-input"
+                                               name="newPasswordInput"
+                                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
+                                               required>
+                                        <div class="input-group-append d-none">
+                                            <button type="button" class="shadow-none btn p-0" name="new-password-input"
+                                                    onclick="handleShowHidePassword(event)">
+                                                <i id="new-password-input-icon"
+                                                   class="fa icon-eye-close fa-eye-slash"
+                                                   title="Show your password"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Password must be at least 8 characters long
+                                            and contain one capital and lowercase letters, and one of the special
+                                            characters:
+                                            !@#$%^&*_=+-
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="passwd-new-confirm" class="form-floating password mb-3">
+                                    <label for="new-password-confirmation-input">Re-enter new password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control rounded-4 mt-n2"
+                                               id="new-password-confirmation-input"
+                                               name="newPasswordConfirmationInput"
+                                               pattern="^.{1,}$"
+                                               required>
+                                        <div class="input-group-append d-none">
+                                            <button type="button" class="shadow-none btn p-0"
+                                                    name="new-password-confirmation-input"
+                                                    onclick="handleShowHidePassword(event)">
+                                                <i id="new-password-confirmation-input-icon"
+                                                   class="fa icon-eye-close fa-eye-slash"
+                                                   title="Show your password"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Passwords do not match <i class="fas fa-arrow-up"></i>
+                                        </div>
+                                        <div id="valid" class="valid-feedback">
+                                            Great! Passwords matched
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer text-center">
+                                <button id="submit-button-sign-up" class="btn btn-danger" type="submit"
+                                        onclick="handleValidation(event, mainFormChangePassword)">
+                                    Change password
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End of Change Password Modal --------------------------------------------------------------------------------------------->
+    </div>
+</div>
+
+<script src="/public/js/app.js"></script>
+</body>
+</html>
